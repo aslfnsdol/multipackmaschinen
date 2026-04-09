@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutzerklärung | Multipackmaschinen24</title>
+    <meta name="robots" content="noindex, follow">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #0a0a0a;
+            color: #f5f0eb;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-weight: 400;
+            letter-spacing: 0.04em;
+        }
+
+        a {
+            color: #00d4aa;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #00eabb;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #1a1a1a;
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+
+        .nav-logo {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 28px;
+            color: #f5f0eb;
+            letter-spacing: 0.06em;
+        }
+
+        .nav-logo span {
+            color: #00d4aa;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #8a8a8a;
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #00d4aa;
+        }
+
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background-color: #f5f0eb;
+            transition: all 0.3s ease;
+        }
+
+        /* Content */
+        .legal-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 140px 24px 120px;
+        }
+
+        .legal-content h1 {
+            font-size: clamp(48px, 8vw, 72px);
+            margin-bottom: 24px;
+            color: #f5f0eb;
+        }
+
+        .legal-content .intro {
+            color: #8a8a8a;
+            font-size: 16px;
+            margin-bottom: 48px;
+        }
+
+        .legal-content h2 {
+            font-size: 28px;
+            color: #00d4aa;
+            margin-top: 48px;
+            margin-bottom: 16px;
+        }
+
+        .legal-content h3 {
+            font-size: 22px;
+            color: #f5f0eb;
+            margin-top: 32px;
+            margin-bottom: 12px;
+        }
+
+        .legal-content p {
+            color: #f5f0eb;
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        .legal-content ul {
+            margin: 12px 0 12px 24px;
+            color: #f5f0eb;
+            font-size: 16px;
+        }
+
+        .legal-content ul li {
+            margin-bottom: 8px;
+        }
+
+        .legal-content .secondary {
+            color: #8a8a8a;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid #1a1a1a;
+            padding: 48px 24px;
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-left {
+            color: #8a8a8a;
+            font-size: 14px;
+        }
+
+        .footer-left strong {
+            color: #f5f0eb;
+            font-weight: 600;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-links a {
+            color: #8a8a8a;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #00d4aa;
+        }
+
+        .footer-copy {
+            width: 100%;
+            text-align: center;
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 1px solid #1a1a1a;
+            color: #8a8a8a;
+            font-size: 13px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 72px;
+                left: 0;
+                width: 100%;
+                flex-direction: column;
+                background-color: rgba(10, 10, 10, 0.98);
+                border-bottom: 1px solid #1a1a1a;
+                padding: 24px;
+                gap: 16px;
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-toggle {
+                display: flex;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-inner">
+            <a href="/" class="nav-logo">MM<span>24</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/#maschine">Maschine</a></li>
+                <li><a href="/#spezifikationen">Spezifikationen</a></li>
+                <li><a href="/#anwendungen">Anwendungen</a></li>
+                <li><a href="/kontakt">Kontakt</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="legal-content">
+        <h1>Datenschutzerklärung</h1>
+        <p class="intro">Stand: April 2026</p>
+
+        <h2>1. Verantwortliche Stelle</h2>
+        <p>
+            Verantwortlich für die Datenverarbeitung auf dieser Website ist:
+        </p>
+        <p>
+            Benner MSA GmbH<br>
+            Am Hasenbiel 6<br>
+            76297 Stutensee-Blankenloch<br>
+            Telefon: +49 7244 9476-400<br>
+            E-Mail: <a href="mailto:info@benner-msa.de">info@benner-msa.de</a>
+        </p>
+
+        <h2>2. Erhebung und Speicherung personenbezogener Daten</h2>
+        <p>
+            Beim Besuch unserer Website werden automatisch Informationen durch den Hosting-Anbieter erfasst. Diese Informationen (Server-Logfiles) umfassen:
+        </p>
+        <ul>
+            <li>Browsertyp und Browserversion</li>
+            <li>Verwendetes Betriebssystem</li>
+            <li>Referrer URL (die zuvor besuchte Seite)</li>
+            <li>IP-Adresse des zugreifenden Rechners</li>
+            <li>Uhrzeit der Serveranfrage</li>
+        </ul>
+        <p>
+            Diese Daten sind nicht bestimmten Personen zuordenbar. Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen. Die Erfassung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Der Websitebetreiber hat ein berechtigtes Interesse an der technisch fehlerfreien Darstellung und der Optimierung seiner Website.
+        </p>
+
+        <h2>3. Kontaktformular</h2>
+        <p>
+            Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Formular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert.
+        </p>
+        <p>
+            Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO).
+        </p>
+        <p>
+            Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt. Zwingende gesetzliche Bestimmungen — insbesondere Aufbewahrungsfristen — bleiben unberührt.
+        </p>
+        <p>
+            Zur Verarbeitung der Formulardaten nutzen wir den Dienst Web3Forms. Die Daten werden dabei an die Server von Web3Forms übermittelt. Weitere Informationen finden Sie in der Datenschutzerklärung von Web3Forms unter <a href="https://web3forms.com/privacy" target="_blank" rel="noopener noreferrer">https://web3forms.com/privacy</a>.
+        </p>
+
+        <h2>4. Cookies</h2>
+        <p>
+            Diese Website verwendet keine Cookies zu Tracking- oder Analysezwecken. Es werden keine Cookies gesetzt, die eine Einwilligung erfordern. Technisch notwendige Cookies können vom Hosting-Anbieter gesetzt werden, um den ordnungsgemäßen Betrieb der Website sicherzustellen. Diese sind gemäß Art. 6 Abs. 1 lit. f DSGVO auf Basis unseres berechtigten Interesses gerechtfertigt.
+        </p>
+
+        <h2>5. SSL-Verschlüsselung</h2>
+        <p>
+            Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine SSL-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://" auf „https://" wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.
+        </p>
+        <p>
+            Wenn die SSL-Verschlüsselung aktiviert ist, können die Daten, die Sie an uns übermitteln, nicht von Dritten mitgelesen werden.
+        </p>
+
+        <h2>6. Hosting</h2>
+        <p>
+            Diese Website wird bei GitHub Pages gehostet. Der Anbieter ist GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA. Beim Aufruf dieser Website werden durch GitHub automatisch Informationen erfasst und in sogenannten Server-Log-Dateien gespeichert.
+        </p>
+        <p>
+            Zusätzlich wird Cloudflare als Content Delivery Network (CDN) und DNS-Anbieter eingesetzt. Cloudflare, Inc., 101 Townsend St, San Francisco, CA 94107, USA. Cloudflare kann technisch notwendige Cookies setzen, um die Funktionalität und Sicherheit der Website zu gewährleisten.
+        </p>
+        <p>
+            Die Nutzung von GitHub Pages und Cloudflare erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an einer zuverlässigen und sicheren Darstellung unserer Website.
+        </p>
+
+        <h2>7. Ihre Rechte</h2>
+        <p>Sie haben gegenüber uns folgende Rechte hinsichtlich der Sie betreffenden personenbezogenen Daten:</p>
+        <ul>
+            <li><strong>Recht auf Auskunft</strong> (Art. 15 DSGVO) — Sie können Auskunft über Ihre von uns verarbeiteten personenbezogenen Daten verlangen.</li>
+            <li><strong>Recht auf Berichtigung</strong> (Art. 16 DSGVO) — Sie können die Berichtigung unrichtiger oder die Vervollständigung Ihrer bei uns gespeicherten personenbezogenen Daten verlangen.</li>
+            <li><strong>Recht auf Löschung</strong> (Art. 17 DSGVO) — Sie können die Löschung Ihrer bei uns gespeicherten personenbezogenen Daten verlangen, soweit nicht die Verarbeitung zur Ausübung des Rechts auf freie Meinungsäußerung und Information, zur Erfüllung einer rechtlichen Verpflichtung oder aus Gründen des öffentlichen Interesses erforderlich ist.</li>
+            <li><strong>Recht auf Einschränkung der Verarbeitung</strong> (Art. 18 DSGVO) — Sie können die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten verlangen.</li>
+            <li><strong>Recht auf Datenübertragbarkeit</strong> (Art. 20 DSGVO) — Sie können verlangen, dass wir Ihnen Ihre personenbezogenen Daten in einem strukturierten, gängigen und maschinenlesbaren Format übermitteln.</li>
+            <li><strong>Recht auf Widerspruch</strong> (Art. 21 DSGVO) — Sie können jederzeit gegen die Verarbeitung Ihrer personenbezogenen Daten Widerspruch einlegen.</li>
+        </ul>
+        <p>
+            Darüber hinaus haben Sie das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten durch uns zu beschweren. Zuständige Aufsichtsbehörde ist der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Baden-Württemberg.
+        </p>
+
+        <h2>8. Änderung der Datenschutzerklärung</h2>
+        <p>
+            Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen in der Datenschutzerklärung umzusetzen. Für Ihren erneuten Besuch gilt dann die neue Datenschutzerklärung.
+        </p>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-left">
+                <strong>Benner MSA GmbH</strong><br>
+                Am Hasenbiel 6, 76297 Stutensee
+            </div>
+            <div class="footer-links">
+                <a href="/impressum">Impressum</a>
+                <a href="/datenschutz">Datenschutz</a>
+            </div>
+            <div class="footer-copy">
+                &copy; 2026 Benner MSA GmbH. Alle Rechte vorbehalten.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('navToggle').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('open');
+        });
+    </script>
+</body>
+</html>

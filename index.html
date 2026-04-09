@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multipackmaschinen Made in Germany | Benner MSA</title>
+  <meta name="description" content="Multipackmaschinen von Benner MSA: Kompakte, energiesparende Multipack-Lösungen zum Bündeln und Etikettieren. Made in Germany.">
+  <link rel="canonical" href="https://multipackmaschinen.de/">
+  <meta property="og:title" content="Multipackmaschinen Made in Germany | Benner MSA">
+  <meta property="og:description" content="Kompakte, energiesparende Multipack-Lösungen zum Bündeln und Etikettieren. Made in Germany.">
+  <meta property="og:url" content="https://multipackmaschinen.de/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="Multipackmaschinen.de">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Benner MSA GmbH",
+    "url": "https://multipackmaschinen.de",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Am Hasenbiel 6",
+      "addressLocality": "Stutensee",
+      "postalCode": "76297",
+      "addressCountry": "DE"
+    },
+    "telephone": "+49 7244 9476-400"
+  }
+  </script>
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --card: #141414;
+      --border: #1a1a1a;
+      --accent: #00d4aa;
+      --accent-hover: #00eabb;
+      --text: #f5f0eb;
+      --text-secondary: #8a8a8a;
+      --font-display: 'Bebas Neue', cursive;
+      --font-body: 'Outfit', sans-serif;
+      --section-padding: 120px;
+      --container: 1200px;
+    }
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    ::selection {
+      background: var(--accent);
+      color: var(--bg);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ===== Focus Styles ===== */
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    /* ===== Container ===== */
+    .container {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ===== Navigation ===== */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 20px 0;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .nav.scrolled {
+      background: rgba(10, 10, 10, 0.92);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .nav__logo {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      letter-spacing: 3px;
+      color: var(--text);
+      transition: color 0.3s;
+    }
+
+    .nav__logo:hover {
+      color: var(--accent);
+    }
+
+    .nav__links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
+
+    .nav__links a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      color: var(--text-secondary);
+      transition: color 0.3s;
+      position: relative;
+    }
+
+    .nav__links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--accent);
+      transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .nav__links a:hover,
+    .nav__links a:focus-visible {
+      color: var(--text);
+    }
+
+    .nav__links a:hover::after,
+    .nav__links a:focus-visible::after {
+      width: 100%;
+    }
+
+    /* Hamburger */
+    .nav__hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 1001;
+    }
+
+    .nav__hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text);
+      transition: all 0.3s;
+      border-radius: 1px;
+    }
+
+    .nav__hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .nav__hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .nav__hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* ===== Hero ===== */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero__mesh {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 20% 30%, rgba(0, 212, 170, 0.12) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 80% at 80% 70%, rgba(0, 212, 170, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 70% 50% at 50% 50%, rgba(0, 180, 140, 0.06) 0%, transparent 50%),
+        radial-gradient(ellipse 40% 40% at 70% 20%, rgba(0, 234, 187, 0.1) 0%, transparent 50%);
+      animation: meshMove 12s ease-in-out infinite alternate;
+    }
+
+    @keyframes meshMove {
+      0% {
+        background:
+          radial-gradient(ellipse 80% 60% at 20% 30%, rgba(0, 212, 170, 0.12) 0%, transparent 60%),
+          radial-gradient(ellipse 60% 80% at 80% 70%, rgba(0, 212, 170, 0.08) 0%, transparent 60%),
+          radial-gradient(ellipse 70% 50% at 50% 50%, rgba(0, 180, 140, 0.06) 0%, transparent 50%),
+          radial-gradient(ellipse 40% 40% at 70% 20%, rgba(0, 234, 187, 0.1) 0%, transparent 50%);
+      }
+      33% {
+        background:
+          radial-gradient(ellipse 70% 70% at 40% 60%, rgba(0, 212, 170, 0.14) 0%, transparent 60%),
+          radial-gradient(ellipse 80% 60% at 60% 30%, rgba(0, 212, 170, 0.1) 0%, transparent 60%),
+          radial-gradient(ellipse 50% 60% at 30% 80%, rgba(0, 180, 140, 0.08) 0%, transparent 50%),
+          radial-gradient(ellipse 50% 50% at 80% 50%, rgba(0, 234, 187, 0.07) 0%, transparent 50%);
+      }
+      66% {
+        background:
+          radial-gradient(ellipse 60% 80% at 70% 40%, rgba(0, 212, 170, 0.1) 0%, transparent 60%),
+          radial-gradient(ellipse 70% 50% at 30% 60%, rgba(0, 212, 170, 0.12) 0%, transparent 60%),
+          radial-gradient(ellipse 80% 40% at 60% 20%, rgba(0, 180, 140, 0.07) 0%, transparent 50%),
+          radial-gradient(ellipse 40% 60% at 20% 70%, rgba(0, 234, 187, 0.09) 0%, transparent 50%);
+      }
+      100% {
+        background:
+          radial-gradient(ellipse 90% 50% at 50% 50%, rgba(0, 212, 170, 0.1) 0%, transparent 60%),
+          radial-gradient(ellipse 50% 90% at 40% 40%, rgba(0, 212, 170, 0.09) 0%, transparent 60%),
+          radial-gradient(ellipse 60% 60% at 70% 70%, rgba(0, 180, 140, 0.1) 0%, transparent 50%),
+          radial-gradient(ellipse 60% 40% at 30% 30%, rgba(0, 234, 187, 0.08) 0%, transparent 50%);
+      }
+    }
+
+    /* Noise texture overlay */
+    .hero__noise {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      opacity: 0.035;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+    }
+
+    .hero__content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 0 24px;
+    }
+
+    .hero__title {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 10vw, 8rem);
+      line-height: 1;
+      letter-spacing: 6px;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+
+    .hero__subtitle {
+      font-size: clamp(1rem, 2.5vw, 1.4rem);
+      font-weight: 300;
+      color: var(--text-secondary);
+      letter-spacing: 2px;
+      margin-bottom: 48px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 16px 40px;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      text-transform: uppercase;
+    }
+
+    .btn--primary {
+      background: var(--accent);
+      color: var(--bg);
+    }
+
+    .btn--primary:hover,
+    .btn--primary:focus-visible {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0, 212, 170, 0.25);
+    }
+
+    .btn--outline {
+      background: transparent;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+    }
+
+    .btn--outline:hover,
+    .btn--outline:focus-visible {
+      background: rgba(0, 212, 170, 0.08);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0, 212, 170, 0.15);
+    }
+
+    .hero__scroll-hint {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-secondary);
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      animation: scrollBounce 2s ease-in-out infinite;
+    }
+
+    .hero__scroll-hint svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--text-secondary);
+    }
+
+    @keyframes scrollBounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(8px); }
+    }
+
+    /* ===== Section Defaults ===== */
+    section {
+      padding: var(--section-padding) 0;
+    }
+
+    .section__label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .section__title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      letter-spacing: 3px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .section__subtitle {
+      font-size: 1.05rem;
+      font-weight: 300;
+      color: var(--text-secondary);
+      max-width: 600px;
+      line-height: 1.7;
+    }
+
+    /* ===== Reveal Animations ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    .reveal-delay-5 { transition-delay: 0.5s; }
+    .reveal-delay-6 { transition-delay: 0.6s; }
+
+    /* ===== USP Section ===== */
+    .usp__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 60px;
+    }
+
+    .usp__card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 48px 36px;
+      text-align: center;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .usp__card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 12px;
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(0, 212, 170, 0), rgba(0, 212, 170, 0));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      transition: background 0.4s;
+      pointer-events: none;
+    }
+
+    .usp__card:hover::before {
+      background: linear-gradient(135deg, rgba(0, 212, 170, 0.3), rgba(0, 212, 170, 0.05));
+    }
+
+    .usp__card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 60px rgba(0, 212, 170, 0.08);
+      border-color: rgba(0, 212, 170, 0.15);
+    }
+
+    .usp__icon {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      background: rgba(0, 212, 170, 0.08);
+    }
+
+    .usp__icon svg {
+      width: 28px;
+      height: 28px;
+      stroke: var(--accent);
+      fill: none;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .usp__card h3 {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
+    .usp__card p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* ===== Product Section ===== */
+    .product__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      margin-top: 60px;
+    }
+
+    .product__image {
+      aspect-ratio: 4/3;
+      background: var(--card);
+      border: 1px solid var(--accent);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      letter-spacing: 2px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .product__image::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0, 212, 170, 0.04) 0%, transparent 60%);
+    }
+
+    .product__image span {
+      position: relative;
+      z-index: 1;
+      font-family: var(--font-body);
+      font-weight: 500;
+    }
+
+    .product__text h3 {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    .product__text p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--text-secondary);
+      margin-bottom: 32px;
+    }
+
+    /* ===== Specs Section ===== */
+    .specs {
+      background: var(--card);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .specs__grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 24px;
+      margin-top: 60px;
+    }
+
+    .specs__card {
+      text-align: center;
+      padding: 40px 20px;
+      border-radius: 12px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .specs__card:hover {
+      border-color: rgba(0, 212, 170, 0.2);
+      transform: translateY(-4px);
+    }
+
+    .specs__number {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      color: var(--accent);
+      letter-spacing: 2px;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .specs__unit {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      font-weight: 400;
+      letter-spacing: 0.5px;
+    }
+
+    /* ===== Applications Section ===== */
+    .applications__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 60px;
+    }
+
+    .applications__card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 12px 12px 0;
+      padding: 36px 40px;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .applications__card:hover {
+      border-left-color: var(--accent-hover);
+      transform: translateX(4px);
+      box-shadow: -4px 0 20px rgba(0, 212, 170, 0.06);
+    }
+
+    .applications__card h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
+    .applications__card p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* ===== Advantages Section ===== */
+    .advantages__list {
+      margin-top: 60px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px 48px;
+    }
+
+    .advantages__item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 16px 0;
+    }
+
+    .advantages__check {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(0, 212, 170, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+
+    .advantages__check svg {
+      width: 14px;
+      height: 14px;
+      stroke: var(--accent);
+      fill: none;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .advantages__item p {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: var(--text-secondary);
+    }
+
+    /* ===== CTA Section ===== */
+    .cta {
+      text-align: center;
+      background:
+        radial-gradient(ellipse 60% 50% at 50% 50%, rgba(0, 212, 170, 0.06) 0%, transparent 70%);
+    }
+
+    .cta__title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      letter-spacing: 3px;
+      margin-bottom: 16px;
+    }
+
+    .cta__phone {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      margin-top: 24px;
+    }
+
+    .cta__phone a {
+      color: var(--accent);
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .cta__phone a:hover {
+      color: var(--accent-hover);
+    }
+
+    /* ===== Footer ===== */
+    .footer {
+      padding: 48px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .footer__company {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .footer__company strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .footer__links {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .footer__links a {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      transition: color 0.3s;
+    }
+
+    .footer__links a:hover {
+      color: var(--accent);
+    }
+
+    .footer__copy {
+      width: 100%;
+      text-align: center;
+      padding-top: 32px;
+      margin-top: 32px;
+      border-top: 1px solid var(--border);
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 1024px) {
+      .specs__grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      :root {
+        --section-padding: 80px;
+      }
+
+      .nav__hamburger {
+        display: flex;
+      }
+
+      .nav__links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 280px;
+        background: rgba(10, 10, 10, 0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        flex-direction: column;
+        padding: 100px 40px 40px;
+        gap: 28px;
+        transform: translateX(100%);
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        border-left: 1px solid var(--border);
+      }
+
+      .nav__links.open {
+        transform: translateX(0);
+      }
+
+      .nav__links a {
+        font-size: 1.1rem;
+      }
+
+      .usp__grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .product__grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .specs__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .applications__grid {
+        grid-template-columns: 1fr;
+      }
+
+      .advantages__list {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .footer__inner {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      :root {
+        --section-padding: 60px;
+      }
+
+      .specs__grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero__title {
+        letter-spacing: 3px;
+      }
+    }
+
+    /* ===== Mobile Menu Overlay ===== */
+    .nav__overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 999;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s;
+    }
+
+    .nav__overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    /* ===== Divider Line ===== */
+    .divider {
+      width: 60px;
+      height: 2px;
+      background: var(--accent);
+      margin-bottom: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="Hauptnavigation">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo" aria-label="Startseite">MM24</a>
+      <ul class="nav__links" role="menubar">
+        <li role="none"><a href="#maschine" role="menuitem">Maschine</a></li>
+        <li role="none"><a href="#spezifikationen" role="menuitem">Spezifikationen</a></li>
+        <li role="none"><a href="#anwendungen" role="menuitem">Anwendungen</a></li>
+        <li role="none"><a href="#kontakt" role="menuitem">Kontakt</a></li>
+      </ul>
+      <button class="nav__hamburger" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="nav__overlay" aria-hidden="true"></div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" aria-label="Willkommen">
+    <div class="hero__mesh" aria-hidden="true"></div>
+    <div class="hero__noise" aria-hidden="true"></div>
+    <div class="hero__content">
+      <h1 class="hero__title">MULTIPACK MASCHINE</h1>
+      <p class="hero__subtitle">Präzises Bündeln. Kompakt. Energiesparend.</p>
+      <a href="#kontakt" class="btn btn--primary">Angebot anfragen</a>
+    </div>
+    <div class="hero__scroll-hint" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+    </div>
+  </section>
+
+  <!-- USP Section -->
+  <section class="usp" aria-label="Vorteile im Überblick">
+    <div class="container">
+      <div class="reveal">
+        <p class="section__label">Warum Multipack</p>
+        <h2 class="section__title">EFFIZIENT. KOMPAKT. NACHHALTIG.</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="usp__grid">
+        <div class="usp__card reveal reveal-delay-1">
+          <div class="usp__icon">
+            <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <h3>ENERGIESPAREND</h3>
+          <p>Sehr niedriger Energieaufwand im Vergleich zu herkömmlichen Schrumpftunneln. Kosteneffizient im Dauerbetrieb.</p>
+        </div>
+        <div class="usp__card reveal reveal-delay-2">
+          <div class="usp__icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg>
+          </div>
+          <h3>KOMPAKT</h3>
+          <p>Nur 4 m² Stellfläche. Passt in jede bestehende Produktionslinie — einfache Integration ohne Umbau.</p>
+        </div>
+        <div class="usp__card reveal reveal-delay-3">
+          <div class="usp__icon">
+            <svg viewBox="0 0 24 24"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M8 12l2.5 2.5L16 9"/></svg>
+          </div>
+          <h3>NACHHALTIG</h3>
+          <p>Kompatibel mit nachhaltigen Packstoffen. Materialsparende Umverpackung für eine umweltbewusste Produktion.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Section -->
+  <section id="maschine" aria-labelledby="maschine-title">
+    <div class="container">
+      <div class="product__grid">
+        <div class="product__image reveal">
+          <span>Produktbild</span>
+        </div>
+        <div class="product__text reveal reveal-delay-2">
+          <p class="section__label">Die Maschine</p>
+          <h2 id="maschine-title" class="section__title">MULTIPACK&shy;MASCHINE</h2>
+          <div class="divider"></div>
+          <p>Unsere Multipackmaschine ermöglicht präzises Etikettieren und attraktives Bündeln Ihrer Produkte in exakt abgezählten Mengen. Perforierte Etiketten für einfaches Abreißen einzelner Packungen — eine kompakte Alternative zu Schrumpftunneln.</p>
+          <a href="#kontakt" class="btn btn--outline">Mehr erfahren</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specs Section -->
+  <section id="spezifikationen" class="specs" aria-labelledby="specs-title">
+    <div class="container">
+      <div class="reveal" style="text-align: center;">
+        <p class="section__label">Technische Daten</p>
+        <h2 id="specs-title" class="section__title">LEISTUNG AUF EINEN BLICK</h2>
+        <div class="divider" style="margin-left: auto; margin-right: auto;"></div>
+      </div>
+      <div class="specs__grid">
+        <div class="specs__card reveal reveal-delay-1">
+          <div class="specs__number">30</div>
+          <div class="specs__unit">Multipacks / min</div>
+        </div>
+        <div class="specs__card reveal reveal-delay-2">
+          <div class="specs__number">4 M²</div>
+          <div class="specs__unit">Stellfläche</div>
+        </div>
+        <div class="specs__card reveal reveal-delay-3">
+          <div class="specs__number">2–10</div>
+          <div class="specs__unit">Stück pro Bündel</div>
+        </div>
+        <div class="specs__card reveal reveal-delay-4">
+          <div class="specs__number">80–100</div>
+          <div class="specs__unit">Takte / min eingehend</div>
+        </div>
+        <div class="specs__card reveal reveal-delay-5">
+          <div class="specs__number">2×2×2 M</div>
+          <div class="specs__unit">Maschinengröße (L × B × H)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Applications Section -->
+  <section id="anwendungen" aria-labelledby="anwendungen-title">
+    <div class="container">
+      <div class="reveal">
+        <p class="section__label">Anwendungen</p>
+        <h2 id="anwendungen-title" class="section__title">BRANCHEN & PRODUKTE</h2>
+        <div class="divider"></div>
+        <p class="section__subtitle">Unsere Multipackmaschine ist vielseitig einsetzbar — von Lebensmitteln bis Medizintechnik.</p>
+      </div>
+      <div class="applications__grid">
+        <div class="applications__card reveal reveal-delay-1">
+          <h3>FOOD & NON-FOOD</h3>
+          <p>Riegel, Kekse, Flowpacks, Chips, Schokoladentafeln, Müsliriegel und weitere Lebensmittelprodukte in kompakten Bündeln.</p>
+        </div>
+        <div class="applications__card reveal reveal-delay-2">
+          <h3>PHARMA</h3>
+          <p>Blisterverpackungen, Faltschachteln und pharmazeutische Produkte sicher und präzise gebündelt.</p>
+        </div>
+        <div class="applications__card reveal reveal-delay-3">
+          <h3>KOSMETIK</h3>
+          <p>Tuben, Tiegel, Fläschchen und Kosmetikverpackungen attraktiv zusammengefasst für den Einzelhandel.</p>
+        </div>
+        <div class="applications__card reveal reveal-delay-4">
+          <h3>MEDIZINTECHNIK</h3>
+          <p>Medizinprodukte und sterile Verpackungen zuverlässig gebündelt — für höchste Anforderungen an Sauberkeit und Präzision.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Advantages Section -->
+  <section aria-labelledby="vorteile-title">
+    <div class="container">
+      <div class="reveal">
+        <p class="section__label">Ihre Vorteile</p>
+        <h2 id="vorteile-title" class="section__title">DARUM MULTIPACK</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="advantages__list">
+        <div class="advantages__item reveal reveal-delay-1">
+          <div class="advantages__check">
+            <svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>
+          </div>
+          <p>Preiswerte und materialsparende Umverpackung</p>
+        </div>
+        <div class="advantages__item reveal reveal-delay-2">
+          <div class="advantages__check">
+            <svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>
+          </div>
+          <p>Sehr niedriger Energieaufwand</p>
+        </div>
+        <div class="advantages__item reveal reveal-delay-3">
+          <div class="advantages__check">
+            <svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>
+          </div>
+          <p>Kompatibel mit nachhaltigen Packstoffen</p>
+        </div>
+        <div class="advantages__item reveal reveal-delay-4">
+          <div class="advantages__check">
+            <svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>
+          </div>
+          <p>Bedruckbare Etiketten (Barcode, LOT, MHD)</p>
+        </div>
+        <div class="advantages__item reveal reveal-delay-5">
+          <div class="advantages__check">
+            <svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>
+          </div>
+          <p>Kompaktes Design, einfache Integration</p>
+        </div>
+        <div class="advantages__item reveal reveal-delay-6">
+          <div class="advantages__check">
+            <svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>
+          </div>
+          <p>Steuerung: B&amp;R, SEW, Siemens, Schneider Electric, WAGO</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section id="kontakt" class="cta" aria-labelledby="cta-title">
+    <div class="container">
+      <div class="reveal">
+        <h2 id="cta-title" class="cta__title">BEREIT FÜR EFFIZIENTERES VERPACKEN?</h2>
+        <p class="section__subtitle" style="max-width: 100%; margin-bottom: 40px;">Fordern Sie jetzt Ihr individuelles Angebot an — unverbindlich und kostenlos.</p>
+        <a href="mailto:info@benner-msa.de?subject=Anfrage%20Multipackmaschine" class="btn btn--primary">Angebot anfragen</a>
+        <p class="cta__phone">Oder rufen Sie uns an: <a href="tel:+4972449476400">+49 7244 9476-400</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__company">
+          <strong>Benner MSA GmbH</strong><br>
+          Am Hasenbiel 6, 76297 Stutensee
+        </div>
+        <div class="footer__links">
+          <a href="/impressum">Impressum</a>
+          <a href="/datenschutz">Datenschutz</a>
+        </div>
+      </div>
+      <div class="footer__copy">
+        &copy; 2026 Benner MSA GmbH. Alle Rechte vorbehalten.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* ===== Navbar Scroll Effect ===== */
+    (function() {
+      var nav = document.querySelector('.nav');
+      var scrollThreshold = 60;
+
+      function onScroll() {
+        if (window.scrollY > scrollThreshold) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+        }
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+
+    /* ===== Mobile Menu ===== */
+    (function() {
+      var hamburger = document.querySelector('.nav__hamburger');
+      var navLinks = document.querySelector('.nav__links');
+      var overlay = document.querySelector('.nav__overlay');
+      var links = navLinks.querySelectorAll('a');
+
+      function toggleMenu() {
+        var isOpen = navLinks.classList.toggle('open');
+        hamburger.classList.toggle('active');
+        overlay.classList.toggle('active');
+        hamburger.setAttribute('aria-expanded', isOpen);
+        hamburger.setAttribute('aria-label', isOpen ? 'Menü schließen' : 'Menü öffnen');
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      }
+
+      function closeMenu() {
+        navLinks.classList.remove('open');
+        hamburger.classList.remove('active');
+        overlay.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', 'Menü öffnen');
+        document.body.style.overflow = '';
+      }
+
+      hamburger.addEventListener('click', toggleMenu);
+      overlay.addEventListener('click', closeMenu);
+
+      for (var i = 0; i < links.length; i++) {
+        links[i].addEventListener('click', closeMenu);
+      }
+    })();
+
+    /* ===== Scroll Reveal (IntersectionObserver) ===== */
+    (function() {
+      var reveals = document.querySelectorAll('.reveal');
+
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.12,
+          rootMargin: '0px 0px -40px 0px'
+        });
+
+        reveals.forEach(function(el) {
+          observer.observe(el);
+        });
+      } else {
+        /* Fallback: show all immediately */
+        reveals.forEach(function(el) {
+          el.classList.add('visible');
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt | Multipackmaschinen24</title>
+    <meta name="description" content="Kontaktieren Sie uns für eine individuelle Beratung zu Multipackmaschinen. Benner MSA GmbH - Ihr Partner für Verpackungslösungen.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://multipackmaschinen.de/kontakt">
+    <meta property="og:title" content="Kontakt | Multipackmaschinen24">
+    <meta property="og:description" content="Kontaktieren Sie uns für eine individuelle Beratung zu Multipackmaschinen. Benner MSA GmbH - Ihr Partner für Verpackungslösungen.">
+    <meta property="og:url" content="https://multipackmaschinen.de/kontakt">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Multipackmaschinen24">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #0a0a0a;
+            color: #f5f0eb;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-weight: 400;
+            letter-spacing: 0.04em;
+        }
+
+        a {
+            color: #00d4aa;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #00eabb;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #1a1a1a;
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+
+        .nav-logo {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 28px;
+            color: #f5f0eb;
+            letter-spacing: 0.06em;
+        }
+
+        .nav-logo span {
+            color: #00d4aa;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #8a8a8a;
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #00d4aa;
+        }
+
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background-color: #f5f0eb;
+            transition: all 0.3s ease;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 160px 24px 80px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(48px, 8vw, 80px);
+            color: #f5f0eb;
+            margin-bottom: 16px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #8a8a8a;
+            max-width: 560px;
+            margin: 0 auto;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px 120px;
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            gap: 60px;
+        }
+
+        /* Form */
+        .contact-form-card {
+            background-color: #141414;
+            border: 1px solid #1a1a1a;
+            border-radius: 12px;
+            padding: 48px;
+        }
+
+        .contact-form-card h2 {
+            font-size: 32px;
+            margin-bottom: 32px;
+            color: #f5f0eb;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: #8a8a8a;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 18px;
+            background-color: #0a0a0a;
+            border: 1px solid #1a1a1a;
+            border-radius: 8px;
+            color: #f5f0eb;
+            font-family: 'Outfit', sans-serif;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #00d4aa;
+        }
+
+        .form-group textarea {
+            min-height: 160px;
+            resize: vertical;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .submit-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 16px 32px;
+            background-color: #00d4aa;
+            color: #0a0a0a;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 20px;
+            letter-spacing: 0.08em;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #00eabb;
+        }
+
+        /* Sidebar */
+        .contact-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .info-card {
+            background-color: #141414;
+            border: 1px solid #1a1a1a;
+            border-radius: 12px;
+            padding: 32px;
+        }
+
+        .info-card h3 {
+            font-size: 22px;
+            color: #00d4aa;
+            margin-bottom: 16px;
+        }
+
+        .info-item {
+            margin-bottom: 20px;
+        }
+
+        .info-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .info-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: #8a8a8a;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 4px;
+        }
+
+        .info-value {
+            font-size: 16px;
+            color: #f5f0eb;
+        }
+
+        .info-value a {
+            color: #f5f0eb;
+        }
+
+        .info-value a:hover {
+            color: #00d4aa;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid #1a1a1a;
+            padding: 48px 24px;
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-left {
+            color: #8a8a8a;
+            font-size: 14px;
+        }
+
+        .footer-left strong {
+            color: #f5f0eb;
+            font-weight: 600;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-links a {
+            color: #8a8a8a;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #00d4aa;
+        }
+
+        .footer-copy {
+            width: 100%;
+            text-align: center;
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 1px solid #1a1a1a;
+            color: #8a8a8a;
+            font-size: 13px;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .contact-section {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 72px;
+                left: 0;
+                width: 100%;
+                flex-direction: column;
+                background-color: rgba(10, 10, 10, 0.98);
+                border-bottom: 1px solid #1a1a1a;
+                padding: 24px;
+                gap: 16px;
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-toggle {
+                display: flex;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form-card {
+                padding: 32px 24px;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Benner MSA GmbH",
+        "description": "Ihr Partner für Multipackmaschinen und Verpackungslösungen",
+        "url": "https://multipackmaschinen.de",
+        "telephone": "+49 7244 9476-400",
+        "email": "info@benner-msa.de",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Am Hasenbiel 6",
+            "addressLocality": "Stutensee",
+            "postalCode": "76297",
+            "addressCountry": "DE"
+        }
+    }
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="nav-inner">
+            <a href="/" class="nav-logo">MM<span>24</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/#maschine">Maschine</a></li>
+                <li><a href="/#spezifikationen">Spezifikationen</a></li>
+                <li><a href="/#anwendungen">Anwendungen</a></li>
+                <li><a href="/kontakt" class="active">Kontakt</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Kontakt</h1>
+        <p>Wir beraten Sie gerne zu Ihrer individuellen Multipack-Lösung</p>
+    </section>
+
+    <section class="contact-section">
+        <div class="contact-form-card">
+            <h2>Nachricht senden</h2>
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="7ddc81ba-1fdb-4348-8470-b73b24e0beba">
+                <input type="hidden" name="subject" content="Neue Kontaktanfrage von Multipackmaschinen24">
+                <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Ihr Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="firma">Firma</label>
+                        <input type="text" id="firma" name="firma" placeholder="Ihre Firma">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">E-Mail *</label>
+                        <input type="email" id="email" name="email" required placeholder="ihre@email.de">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefon">Telefon</label>
+                        <input type="tel" id="telefon" name="telefon" placeholder="+49 ...">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="nachricht">Nachricht *</label>
+                    <textarea id="nachricht" name="nachricht" required placeholder="Wie können wir Ihnen helfen?"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Nachricht senden</button>
+            </form>
+        </div>
+
+        <aside class="contact-sidebar">
+            <div class="info-card">
+                <h3>Kontaktdaten</h3>
+                <div class="info-item">
+                    <div class="info-label">Telefon</div>
+                    <div class="info-value"><a href="tel:+497244947640">+49 7244 9476-400</a></div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">E-Mail</div>
+                    <div class="info-value"><a href="mailto:info@benner-msa.de">info@benner-msa.de</a></div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Adresse</div>
+                    <div class="info-value">
+                        Benner MSA GmbH<br>
+                        Am Hasenbiel 6<br>
+                        76297 Stutensee
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </section>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-left">
+                <strong>Benner MSA GmbH</strong><br>
+                Am Hasenbiel 6, 76297 Stutensee
+            </div>
+            <div class="footer-links">
+                <a href="/impressum">Impressum</a>
+                <a href="/datenschutz">Datenschutz</a>
+            </div>
+            <div class="footer-copy">
+                &copy; 2026 Benner MSA GmbH. Alle Rechte vorbehalten.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('navToggle').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('open');
+        });
+    </script>
+</body>
+</html>
