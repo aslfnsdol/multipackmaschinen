@@ -1,854 +1,108 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Multipackmaschinen Made in Germany | Benner MSA</title>
-  <meta name="description" content="Multipackmaschinen von Benner MSA: Etikettenbasiertes Bündeln für mittelgroße Stückzahlen. 20–30 Multipacks/min auf unter 4 m². Made in Germany.">
-  <link rel="canonical" href="https://multipackmaschinen.de/">
-  <meta property="og:title" content="Multipackmaschinen Made in Germany | Benner MSA">
-  <meta property="og:description" content="Etikettenbasiertes Bündeln für mittelgroße Stückzahlen. 20–30 Multipacks/min auf unter 4 m². Made in Germany.">
-  <meta property="og:url" content="https://multipackmaschinen.de/">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="de_DE">
-  <meta property="og:site_name" content="Multipackmaschinen.de">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Benner MSA GmbH",
-    "url": "https://multipackmaschinen.de",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Am Hasenbiel 6",
-      "addressLocality": "Stutensee",
-      "postalCode": "76297",
-      "addressCountry": "DE"
-    },
-    "telephone": "+49 7244 9476-400"
-  }
-  </script>
-  <style>
-    :root {
-      --bg: #0a0a0a;
-      --card: #141414;
-      --border: #1a1a1a;
-      --accent: #00d4aa;
-      --accent-hover: #00eabb;
-      --text: #f5f0eb;
-      --text-secondary: #8a8a8a;
-      --font-display: 'Bebas Neue', cursive;
-      --font-body: 'Outfit', sans-serif;
-      --section-padding: 120px;
-      --container: 1200px;
-    }
-
-    *, *::before, *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    body {
-      font-family: var(--font-body);
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    ::selection {
-      background: var(--accent);
-      color: var(--bg);
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    /* ===== Focus Styles ===== */
-    :focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: 3px;
-    }
-
-    /* ===== Container ===== */
-    .container {
-      max-width: var(--container);
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    /* ===== Navigation ===== */
-    .nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      padding: 20px 0;
-      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .nav.scrolled {
-      background: rgba(10, 10, 10, 0.92);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      padding: 14px 0;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .nav__inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      max-width: var(--container);
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    .nav__logo {
-      font-family: var(--font-display);
-      font-size: 1.8rem;
-      letter-spacing: 3px;
-      color: var(--text);
-      transition: color 0.3s;
-    }
-
-    .nav__logo:hover {
-      color: var(--accent);
-    }
-
-    .nav__links {
-      display: flex;
-      gap: 36px;
-      list-style: none;
-    }
-
-    .nav__links a {
-      font-size: 0.9rem;
-      font-weight: 500;
-      letter-spacing: 0.5px;
-      color: var(--text-secondary);
-      transition: color 0.3s;
-      position: relative;
-    }
-
-    .nav__links a::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 0;
-      height: 1px;
-      background: var(--accent);
-      transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .nav__links a:hover,
-    .nav__links a:focus-visible {
-      color: var(--text);
-    }
-
-    .nav__links a:hover::after,
-    .nav__links a:focus-visible::after {
-      width: 100%;
-    }
-
-    /* Hamburger */
-    .nav__hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 8px;
-      z-index: 1001;
-    }
-
-    .nav__hamburger span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: var(--text);
-      transition: all 0.3s;
-      border-radius: 1px;
-    }
-
-    .nav__hamburger.active span:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    .nav__hamburger.active span:nth-child(2) {
-      opacity: 0;
-    }
-
-    .nav__hamburger.active span:nth-child(3) {
-      transform: rotate(-45deg) translate(5px, -5px);
-    }
-
-    /* ===== Hero ===== */
-    .hero {
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-
-    .hero__mesh {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-      background:
-        radial-gradient(ellipse 80% 60% at 20% 30%, rgba(0, 212, 170, 0.12) 0%, transparent 60%),
-        radial-gradient(ellipse 60% 80% at 80% 70%, rgba(0, 212, 170, 0.08) 0%, transparent 60%),
-        radial-gradient(ellipse 70% 50% at 50% 50%, rgba(0, 180, 140, 0.06) 0%, transparent 50%),
-        radial-gradient(ellipse 40% 40% at 70% 20%, rgba(0, 234, 187, 0.1) 0%, transparent 50%);
-      animation: meshMove 12s ease-in-out infinite alternate;
-    }
-
-    @keyframes meshMove {
-      0% {
-        background:
-          radial-gradient(ellipse 80% 60% at 20% 30%, rgba(0, 212, 170, 0.12) 0%, transparent 60%),
-          radial-gradient(ellipse 60% 80% at 80% 70%, rgba(0, 212, 170, 0.08) 0%, transparent 60%),
-          radial-gradient(ellipse 70% 50% at 50% 50%, rgba(0, 180, 140, 0.06) 0%, transparent 50%),
-          radial-gradient(ellipse 40% 40% at 70% 20%, rgba(0, 234, 187, 0.1) 0%, transparent 50%);
-      }
-      33% {
-        background:
-          radial-gradient(ellipse 70% 70% at 40% 60%, rgba(0, 212, 170, 0.14) 0%, transparent 60%),
-          radial-gradient(ellipse 80% 60% at 60% 30%, rgba(0, 212, 170, 0.1) 0%, transparent 60%),
-          radial-gradient(ellipse 50% 60% at 30% 80%, rgba(0, 180, 140, 0.08) 0%, transparent 50%),
-          radial-gradient(ellipse 50% 50% at 80% 50%, rgba(0, 234, 187, 0.07) 0%, transparent 50%);
-      }
-      66% {
-        background:
-          radial-gradient(ellipse 60% 80% at 70% 40%, rgba(0, 212, 170, 0.1) 0%, transparent 60%),
-          radial-gradient(ellipse 70% 50% at 30% 60%, rgba(0, 212, 170, 0.12) 0%, transparent 60%),
-          radial-gradient(ellipse 80% 40% at 60% 20%, rgba(0, 180, 140, 0.07) 0%, transparent 50%),
-          radial-gradient(ellipse 40% 60% at 20% 70%, rgba(0, 234, 187, 0.09) 0%, transparent 50%);
-      }
-      100% {
-        background:
-          radial-gradient(ellipse 90% 50% at 50% 50%, rgba(0, 212, 170, 0.1) 0%, transparent 60%),
-          radial-gradient(ellipse 50% 90% at 40% 40%, rgba(0, 212, 170, 0.09) 0%, transparent 60%),
-          radial-gradient(ellipse 60% 60% at 70% 70%, rgba(0, 180, 140, 0.1) 0%, transparent 50%),
-          radial-gradient(ellipse 60% 40% at 30% 30%, rgba(0, 234, 187, 0.08) 0%, transparent 50%);
-      }
-    }
-
-    /* Noise texture overlay */
-    .hero__noise {
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-      opacity: 0.035;
-      pointer-events: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
-      background-repeat: repeat;
-    }
-
-    .hero__content {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      padding: 0 24px;
-    }
-
-    .hero__title {
-      font-family: var(--font-display);
-      font-size: clamp(3rem, 10vw, 8rem);
-      line-height: 1;
-      letter-spacing: 6px;
-      color: var(--text);
-      margin-bottom: 20px;
-    }
-
-    .hero__subtitle {
-      font-size: clamp(1rem, 2.5vw, 1.4rem);
-      font-weight: 300;
-      color: var(--text-secondary);
-      letter-spacing: 2px;
-      margin-bottom: 48px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 16px 40px;
-      font-family: var(--font-body);
-      font-size: 0.95rem;
-      font-weight: 600;
-      letter-spacing: 1px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-      text-transform: uppercase;
-    }
-
-    .btn--primary {
-      background: var(--accent);
-      color: var(--bg);
-    }
-
-    .btn--primary:hover,
-    .btn--primary:focus-visible {
-      background: var(--accent-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(0, 212, 170, 0.25);
-    }
-
-    .btn--outline {
-      background: transparent;
-      color: var(--accent);
-      border: 1px solid var(--accent);
-    }
-
-    .btn--outline:hover,
-    .btn--outline:focus-visible {
-      background: rgba(0, 212, 170, 0.08);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(0, 212, 170, 0.15);
-    }
-
-    .hero__scroll-hint {
-      position: absolute;
-      bottom: 40px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 2;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-      color: var(--text-secondary);
-      font-size: 0.75rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      animation: scrollBounce 2s ease-in-out infinite;
-    }
-
-    .hero__scroll-hint svg {
-      width: 20px;
-      height: 20px;
-      stroke: var(--text-secondary);
-    }
-
-    @keyframes scrollBounce {
-      0%, 100% { transform: translateX(-50%) translateY(0); }
-      50% { transform: translateX(-50%) translateY(8px); }
-    }
-
-    /* ===== Section Defaults ===== */
-    section {
-      padding: var(--section-padding) 0;
-    }
-
-    .section__label {
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 12px;
-    }
-
-    .section__title {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 5vw, 3.5rem);
-      letter-spacing: 3px;
-      line-height: 1.1;
-      margin-bottom: 20px;
-    }
-
-    .section__subtitle {
-      font-size: 1.05rem;
-      font-weight: 300;
-      color: var(--text-secondary);
-      max-width: 600px;
-      line-height: 1.7;
-    }
-
-    /* ===== Reveal Animations ===== */
-    .reveal {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .reveal-delay-1 { transition-delay: 0.1s; }
-    .reveal-delay-2 { transition-delay: 0.2s; }
-    .reveal-delay-3 { transition-delay: 0.3s; }
-    .reveal-delay-4 { transition-delay: 0.4s; }
-    .reveal-delay-5 { transition-delay: 0.5s; }
-    .reveal-delay-6 { transition-delay: 0.6s; }
-
-    /* ===== USP Section ===== */
-    .usp__grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-top: 60px;
-    }
-
-    .usp__card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 48px 36px;
-      text-align: center;
-      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .usp__card::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      border-radius: 12px;
-      padding: 1px;
-      background: linear-gradient(135deg, rgba(0, 212, 170, 0), rgba(0, 212, 170, 0));
-      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-      transition: background 0.4s;
-      pointer-events: none;
-    }
-
-    .usp__card:hover::before {
-      background: linear-gradient(135deg, rgba(0, 212, 170, 0.3), rgba(0, 212, 170, 0.05));
-    }
-
-    .usp__card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 60px rgba(0, 212, 170, 0.08);
-      border-color: rgba(0, 212, 170, 0.15);
-    }
-
-    .usp__icon {
-      width: 56px;
-      height: 56px;
-      margin: 0 auto 24px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 12px;
-      background: rgba(0, 212, 170, 0.08);
-    }
-
-    .usp__icon svg {
-      width: 28px;
-      height: 28px;
-      stroke: var(--accent);
-      fill: none;
-      stroke-width: 1.5;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .usp__card h3 {
-      font-family: var(--font-display);
-      font-size: 1.6rem;
-      letter-spacing: 2px;
-      margin-bottom: 12px;
-    }
-
-    .usp__card p {
-      font-size: 0.95rem;
-      color: var(--text-secondary);
-      line-height: 1.7;
-    }
-
-    /* ===== Product Section ===== */
-    .product__grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-      margin-top: 60px;
-    }
-
-    .product__image {
-      aspect-ratio: 4/3;
-      background: #ffffff;
-      border: 1px solid var(--accent);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.1rem;
-      color: var(--text-secondary);
-      letter-spacing: 2px;
-      position: relative;
-      overflow: hidden;
-      padding: 28px;
-    }
-
-    .product__image img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-
-    .product__image::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(0, 212, 170, 0.04) 0%, transparent 60%);
-    }
-
-    .product__image span {
-      position: relative;
-      z-index: 1;
-      font-family: var(--font-body);
-      font-weight: 500;
-    }
-
-    .product__text h3 {
-      font-family: var(--font-display);
-      font-size: clamp(1.8rem, 3vw, 2.5rem);
-      letter-spacing: 2px;
-      margin-bottom: 20px;
-    }
-
-    .product__text p {
-      font-size: 1.05rem;
-      line-height: 1.8;
-      color: var(--text-secondary);
-      margin-bottom: 32px;
-    }
-
-    /* ===== Specs Section ===== */
-    .specs {
-      background: var(--card);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .specs__grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 24px;
-      margin-top: 60px;
-    }
-
-    .specs__card {
-      text-align: center;
-      padding: 40px 20px;
-      border-radius: 12px;
-      background: var(--bg);
-      border: 1px solid var(--border);
-      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .specs__card:hover {
-      border-color: rgba(0, 212, 170, 0.2);
-      transform: translateY(-4px);
-    }
-
-    .specs__number {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      color: var(--accent);
-      letter-spacing: 2px;
-      line-height: 1;
-      margin-bottom: 12px;
-    }
-
-    .specs__unit {
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-      font-weight: 400;
-      letter-spacing: 0.5px;
-    }
-
-    /* ===== Applications Section ===== */
-    .applications__grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-      margin-top: 60px;
-    }
-
-    .applications__card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--accent);
-      border-radius: 0 12px 12px 0;
-      padding: 36px 40px;
-      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .applications__card:hover {
-      border-left-color: var(--accent-hover);
-      transform: translateX(4px);
-      box-shadow: -4px 0 20px rgba(0, 212, 170, 0.06);
-    }
-
-    .applications__card h3 {
-      font-family: var(--font-display);
-      font-size: 1.5rem;
-      letter-spacing: 2px;
-      margin-bottom: 12px;
-    }
-
-    .applications__card p {
-      font-size: 0.95rem;
-      color: var(--text-secondary);
-      line-height: 1.7;
-    }
-
-    /* ===== Advantages Section ===== */
-    .advantages__list {
-      margin-top: 60px;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px 48px;
-    }
-
-    .advantages__item {
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-      padding: 16px 0;
-    }
-
-    .advantages__check {
-      flex-shrink: 0;
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: rgba(0, 212, 170, 0.1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 2px;
-    }
-
-    .advantages__check svg {
-      width: 14px;
-      height: 14px;
-      stroke: var(--accent);
-      fill: none;
-      stroke-width: 2.5;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .advantages__item p {
-      font-size: 1.05rem;
-      line-height: 1.6;
-      color: var(--text-secondary);
-    }
-
-    /* ===== CTA Section ===== */
-    .cta {
-      text-align: center;
-      background:
-        radial-gradient(ellipse 60% 50% at 50% 50%, rgba(0, 212, 170, 0.06) 0%, transparent 70%);
-    }
-
-    .cta__title {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 5vw, 3.5rem);
-      letter-spacing: 3px;
-      margin-bottom: 16px;
-    }
-
-    .cta__phone {
-      font-size: 1.05rem;
-      color: var(--text-secondary);
-      margin-top: 24px;
-    }
-
-    .cta__phone a {
-      color: var(--accent);
-      font-weight: 600;
-      transition: color 0.3s;
-    }
-
-    .cta__phone a:hover {
-      color: var(--accent-hover);
-    }
-
-    /* ===== Footer ===== */
-    .footer {
-      padding: 48px 0;
-      border-top: 1px solid var(--border);
-    }
-
-    .footer__inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 24px;
-    }
-
-    .footer__company {
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-      line-height: 1.7;
-    }
-
-    .footer__company strong {
-      color: var(--text);
-      font-weight: 600;
-    }
-
-    .footer__links {
-      display: flex;
-      gap: 32px;
-      align-items: center;
-    }
-
-    .footer__links a {
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-      transition: color 0.3s;
-    }
-
-    .footer__links a:hover {
-      color: var(--accent);
-    }
-
-    .footer__copy {
-      width: 100%;
-      text-align: center;
-      padding-top: 32px;
-      margin-top: 32px;
-      border-top: 1px solid var(--border);
-      font-size: 0.8rem;
-      color: var(--text-secondary);
-    }
-
-    /* ===== Responsive ===== */
-    @media (max-width: 1024px) {
-      .specs__grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    @media (max-width: 768px) {
-      :root {
-        --section-padding: 80px;
-      }
-
-      .nav__hamburger {
-        display: flex;
-      }
-
-      .nav__links {
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        width: 280px;
-        background: rgba(10, 10, 10, 0.98);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        flex-direction: column;
-        padding: 100px 40px 40px;
-        gap: 28px;
-        transform: translateX(100%);
-        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        border-left: 1px solid var(--border);
-      }
-
-      .nav__links.open {
-        transform: translateX(0);
-      }
-
-      .nav__links a {
-        font-size: 1.1rem;
-      }
-
-      .usp__grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
-      }
-
-      .product__grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-
-      .specs__grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .applications__grid {
-        grid-template-columns: 1fr;
-      }
-
-      .advantages__list {
-        grid-template-columns: 1fr;
-        gap: 12px;
-      }
-
-      .footer__inner {
-        flex-direction: column;
-        text-align: center;
-      }
-    }
-
-    @media (max-width: 480px) {
-      :root {
-        --section-padding: 60px;
-      }
-
-      .specs__grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero__title {
-        letter-spacing: 3px;
-      }
-    }
-
-    /* ===== Mobile Menu Overlay ===== */
-    .nav__overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.6);
-      z-index: 999;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.4s;
-    }
-
-    .nav__overlay.active {
-      opacity: 1;
-      pointer-events: all;
-    }
-
-    /* ===== Divider Line ===== */
-    .divider {
-      width: 60px;
-      height: 2px;
-      background: var(--accent);
-      margin-bottom: 40px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>Multipackmaschinen Made in Germany | Benner MSA</title>
+    <meta name="description" content="✓ Multipackmaschinen für Sammelpackungen ✓ Etikettenbasiertes Bündeln ohne Hitze ✓ bis 30 Multipacks/min ✓ Bündel 2–20 Stück ✓ unter 4 m² ✓ Made in Germany">
+    <meta name="keywords" content="Multipackmaschine, Multipackmaschinen, Multipack, Sammelpackung, Bündelmaschine, Made in Germany, Verpackungsmaschine, Benner MSA">
+    <link rel="canonical" href="https://multipackmaschinen.de/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Multipackmaschinen Made in Germany | Benner MSA">
+    <meta property="og:description" content="Etikettenbasiertes Bündeln für Sammelpackungen: bis 30 Multipacks/min, Bündel von 2–20 Stück, unter 4 m² Stellfläche. Made in Germany.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://multipackmaschinen.de/">
+    <meta property="og:image" content="https://multipackmaschinen.de/assets/images/multipackmaschine-gesamt.jpg">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="multipackmaschinen.de">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Multipackmaschinen Made in Germany | Benner MSA">
+    <meta name="twitter:description" content="Etikettenbasiertes Bündeln für Sammelpackungen: bis 30 Multipacks/min, Bündel von 2–20 Stück, unter 4 m² Stellfläche.">
+    <meta name="twitter:image" content="https://multipackmaschinen.de/assets/images/multipackmaschine-gesamt.jpg">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Benner MSA GmbH",
+        "alternateName": "multipackmaschinen.de",
+        "url": "https://multipackmaschinen.de",
+        "sameAs": [
+            "https://benner-msa.de",
+            "https://banderoliermaschinen24.de",
+            "https://www.puffertisch24.de"
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Am Hasenbiel 6",
+            "addressLocality": "Stutensee-Blankenloch",
+            "postalCode": "76297",
+            "addressRegion": "Baden-Württemberg",
+            "addressCountry": "DE"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+49-7244-9476400",
+            "contactType": "sales",
+            "areaServed": ["DE", "AT", "CH"],
+            "availableLanguage": "German"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Multipackmaschine",
+        "description": "Etikettenbasierte Multipackmaschine für DUO, TRIO und größere Bündel. Einzelne Beutel werden gruppiert und über zwei seitliche Etikettierer mit perforierten Etiketten zum Multipack verbunden – ohne Hitze, Made in Germany.",
+        "image": "https://multipackmaschinen.de/assets/images/multipackmaschine-gesamt.jpg",
+        "brand": {
+            "@type": "Brand",
+            "name": "Benner MSA"
+        },
+        "manufacturer": {
+            "@type": "Organization",
+            "name": "Benner MSA GmbH",
+            "url": "https://benner-msa.de"
+        },
+        "category": "Verpackungsmaschine",
+        "additionalProperty": [
+            {
+                "@type": "PropertyValue",
+                "name": "Leistung",
+                "value": "bis 30 Multipacks/min"
+            },
+            {
+                "@type": "PropertyValue",
+                "name": "Bündelgröße",
+                "value": "2–20 Stück"
+            },
+            {
+                "@type": "PropertyValue",
+                "name": "Stellfläche",
+                "value": "unter 4 m²"
+            },
+            {
+                "@type": "PropertyValue",
+                "name": "Herkunft",
+                "value": "Made in Germany"
+            }
+        ]
+    }
+    </script>
+
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <link rel="preload" as="image" href="assets/images/multipackmaschine-gesamt.jpg" fetchpriority="high">
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <link rel="stylesheet" href="assets/style.css">
     <script src="https://analytics.ahrefs.com/analytics.js" data-key="7XIeEUywmtuQw78niawqmQ" async></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-H5MSPKY3FD"></script>
@@ -862,366 +116,464 @@
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="nav" role="navigation" aria-label="Hauptnavigation">
-    <div class="nav__inner">
-      <a href="#" class="nav__logo" aria-label="Startseite">MM24</a>
-      <ul class="nav__links" role="menubar">
-        <li role="none"><a href="#maschine" role="menuitem">Maschine</a></li>
-        <li role="none"><a href="#spezifikationen" role="menuitem">Spezifikationen</a></li>
-        <li role="none"><a href="#anwendungen" role="menuitem">Anwendungen</a></li>
-        <li role="none"><a href="#kontakt" role="menuitem">Kontakt</a></li>
-      </ul>
-      <button class="nav__hamburger" aria-label="Menü öffnen" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+    <!-- Header -->
+    <header class="site-header" id="siteHeader">
+        <div class="container nav-container">
+            <a href="/" class="brand" aria-label="Multipackmaschinen – Startseite">
+                <svg class="brand-mark" width="40" height="40" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+                    <rect x="4" y="7" width="10" height="30" rx="2" stroke="#1B1F24" stroke-width="3"/>
+                    <rect x="17" y="7" width="10" height="30" rx="2" stroke="#1B1F24" stroke-width="3"/>
+                    <rect x="30" y="7" width="10" height="30" rx="2" stroke="#1B1F24" stroke-width="3"/>
+                    <rect x="1" y="17" width="42" height="10" rx="1.5" fill="#D02C2F"/>
+                </svg>
+                <span class="brand-text">
+                    <span class="brand-name">MULTIPACK<span class="brand-red">MASCHINEN</span></span>
+                    <span class="brand-claim">ein Produkt der Benner MSA GmbH</span>
+                </span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navLinks">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#maschine">Maschine</a></li>
+                <li><a href="#funktion">Funktionsweise</a></li>
+                <li><a href="#preise">Preise</a></li>
+                <li><a href="#technik">Technische Daten</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#kontakt" class="btn">Anfrage senden</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>Multipackmaschinen für Sammelpackungen – <span class="price-mark">präzise Bündel</span>, Made in Germany.</h1>
+                <p class="hero-sub">Etikettenbasiertes Bündeln statt Schrumpffolie: Die Multipackmaschine von Benner MSA verbindet Ihre Beutel über perforierte Etiketten zum DUO, TRIO oder größeren Multipack – ohne Hitze, auf unter 4&nbsp;m². Konstruiert und gebaut in Stutensee.</p>
+                <div class="hero-cta">
+                    <a href="#kontakt" class="btn btn-primary btn-lg">Unverbindlich anfragen</a>
+                    <a href="#preise" class="btn btn-outline btn-lg">Was kostet eine Multipackmaschine?&nbsp;↓</a>
+                </div>
+                <ul class="hero-checks">
+                    <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> bis 30&nbsp;Multipacks/min</li>
+                    <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Bündel von 2–20&nbsp;Stück</li>
+                    <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> unter 4&nbsp;m² Stellfläche</li>
+                </ul>
+            </div>
+            <div class="hero-visual">
+                <img src="assets/images/multipackmaschine-gesamt.jpg" alt="Benner MSA Multipackmaschine – Gesamtansicht mit Zulaufband und seitlichen Etikettierern" loading="eager" width="1261" height="1280">
+                <div class="hero-spec-label" aria-hidden="true">
+                    <span class="label-key">Multipackmaschine</span>
+                    <span class="label-val">bis 30 Multipacks/min · Edelstahl</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust-Bar -->
+    <div class="trust-bar">
+        <div class="container">
+            <p>Einsatzbereiche: Food &amp; Non-Food <span class="trust-sep">·</span> Pharma <span class="trust-sep">·</span> Kosmetik <span class="trust-sep">·</span> Medizintechnik</p>
+        </div>
     </div>
-    <div class="nav__overlay" aria-hidden="true"></div>
-  </nav>
 
-  <!-- Hero -->
-  <section class="hero" aria-label="Willkommen">
-    <div class="hero__mesh" aria-hidden="true"></div>
-    <div class="hero__noise" aria-hidden="true"></div>
-    <div class="hero__content">
-      <h1 class="hero__title">MULTIPACK MASCHINE</h1>
-      <p class="hero__subtitle">Etikettenbasiertes Bündeln für mittelgroße Stückzahlen. Kompakt. Made in Germany.</p>
-      <a href="#kontakt" class="btn btn--primary">Angebot anfragen</a>
-    </div>
-    <div class="hero__scroll-hint" aria-hidden="true">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
-    </div>
-  </section>
+    <!-- Problem → Lösung -->
+    <section class="section section-alt" id="problem">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Das Problem</span>
+                <h2>Sammelpackungen: viel Folie, viel Energie – oder teure Handarbeit</h2>
+            </div>
+            <div class="problem-grid">
+                <div class="card problem-card">
+                    <span class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></span>
+                    <h3>Schrumpftunnel frisst Energie</h3>
+                    <p>Ein Schrumpftunnel heizt den ganzen Tag – und die Hitze belastet empfindliche Produkte wie Riegel, Kekse oder Schokolade. Das treibt Betriebskosten und CO₂-Bilanz nach oben.</p>
+                </div>
+                <div class="card problem-card">
+                    <span class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+                    <h3>Handarbeit skaliert nicht</h3>
+                    <p>Bündeln von Hand ist langsam, teuer und fehleranfällig. Bei mittelgroßen Stückzahlen fehlt oft eine wirtschaftliche Lösung zwischen Handarbeit und Vollautomation.</p>
+                </div>
+                <div class="card problem-card">
+                    <span class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></span>
+                    <h3>Vollflächige Folie = Abfall</h3>
+                    <p>Schrumpfen umhüllt jedes Bündel komplett mit Kunststofffolie. Das kostet Material – und passt nicht zu den Nachhaltigkeitszielen von Handel und Verbrauchern.</p>
+                </div>
+            </div>
+            <div class="solution-line">
+                <svg class="solution-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <p><strong>Die Lösung:</strong> das etikettenbasierte Multipack. Zwei seitliche Etikettierer verbinden Ihre Beutel mit perforierten Etiketten zum Bündel – ganz ohne Hitze, mit einem Bruchteil des Materials.</p>
+            </div>
+        </div>
+    </section>
 
-  <!-- USP Section -->
-  <section class="usp" aria-label="Vorteile im Überblick">
-    <div class="container">
-      <div class="reveal">
-        <p class="section__label">Warum Multipack</p>
-        <h2 class="section__title">EFFIZIENT. KOMPAKT. NACHHALTIG.</h2>
-        <div class="divider"></div>
-      </div>
-      <div class="usp__grid">
-        <div class="usp__card reveal reveal-delay-1">
-          <div class="usp__icon">
-            <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-          </div>
-          <h3>ENERGIESPAREND</h3>
-          <p>Sehr niedriger Energieaufwand im Vergleich zu herkömmlichen Schrumpftunneln. Keine Heizenergie nötig — kosteneffizient im Dauerbetrieb.</p>
+    <!-- Echte Fotos -->
+    <section class="section" id="maschine">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Die Maschine</span>
+                <h2>Die Multipackmaschine im Detail</h2>
+                <p>Die etikettenbasierte Multipackmaschine für DUO, TRIO und größere Bündel – wirtschaftlich, kompakt und nachhaltig.</p>
+            </div>
+            <div class="photo-grid">
+                <figure class="photo-card">
+                    <img src="assets/images/multipackmaschine-gesamt.jpg" alt="Multipackmaschine von Benner MSA – Gesamtansicht mit Förderband und Etikettierern" loading="lazy" width="1261" height="1280">
+                    <figcaption><span class="cap-marker">01</span> Die Maschine: Zulaufband, Gruppierung und zwei seitliche Etikettierer auf unter 4&nbsp;m²</figcaption>
+                </figure>
+                <figure class="photo-card">
+                    <img src="assets/images/multipack-3er-bundle.jpg" alt="3er-Multipack – perforierte Etiketten verbinden drei Beutel zur Sammelpackung" loading="lazy" width="1280" height="903">
+                    <figcaption><span class="cap-marker">02</span> Das Ergebnis: 3er-Multipack, verbunden über perforierte Etiketten – optional mit Wiederverschluss</figcaption>
+                </figure>
+            </div>
         </div>
-        <div class="usp__card reveal reveal-delay-2">
-          <div class="usp__icon">
-            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg>
-          </div>
-          <h3>KOMPAKT</h3>
-          <p>Unter 4 m² Stellfläche. Passt in jede bestehende Produktionslinie — ideal auch bei begrenztem Bauraum. Einfache Integration ohne Umbau.</p>
-        </div>
-        <div class="usp__card reveal reveal-delay-3">
-          <div class="usp__icon">
-            <svg viewBox="0 0 24 24"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M8 12l2.5 2.5L16 9"/></svg>
-          </div>
-          <h3>NACHHALTIG</h3>
-          <p>Kompatibel mit nachhaltigen Packstoffen. Materialsparende Umverpackung für eine umweltbewusste Produktion.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Product Section -->
-  <section id="maschine" aria-labelledby="maschine-title">
-    <div class="container">
-      <div class="product__grid">
-        <div class="product__image reveal">
-          <img src="assets/images/multipackmaschine-gesamt.jpg" alt="Benner MSA Multipackmaschine – Gesamtansicht mit Förderband und Etikettierer" width="1261" height="1280" loading="eager">
+    <!-- Funktionsweise -->
+    <section class="section section-alt" id="funktion">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Funktionsweise</span>
+                <h2>So entsteht das Multipack</h2>
+                <p>Kompatibel mit nahezu jeder Beutelform – Doypack/Doyzip, Vierrand- oder Schlauchbeutel – ideal für Nüsse, Trockenfrüchte, Riegel oder Kekse.</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step">
+                    <span class="step-number">01</span>
+                    <h3>Gruppieren</h3>
+                    <p>Einzelne Beutel laufen mit bis zu 100 Takten pro Minute zu und werden automatisch zur gewünschten Bündelgröße von 2 bis 20 Stück gruppiert.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">02</span>
+                    <h3>Etikettieren</h3>
+                    <p>Zwei seitliche Etikettierer verbinden die Produkte schonend mit perforierten Etiketten. Ein patentiertes Ausgleichselement kompensiert Höhendifferenzen bis 15&nbsp;mm.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">03</span>
+                    <h3>Übergeben</h3>
+                    <p>Fertige Multipacks werden stehend oder liegend an die Linie übergeben – auf Wunsch mit Wiederverschlussetikett für den Endkunden.</p>
+                </div>
+            </div>
+            <div class="solution-line" style="margin-top: 48px;">
+                <svg class="solution-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <p><strong>Etiketten als Werbefläche:</strong> Die Etiketten sind bedruckbar mit Logo, Charge, Preis, Aktionscode oder Produktionsdaten – Verpackung und Informationsträger in einem.</p>
+            </div>
         </div>
-        <div class="product__text reveal reveal-delay-2">
-          <p class="section__label">Die Maschine</p>
-          <h2 id="maschine-title" class="section__title">MULTIPACK&shy;MASCHINE</h2>
-          <div class="divider"></div>
-          <p>Die etikettenbasierte Multipackmaschine für DUO, TRIO und größere Bündel — wirtschaftlich und nachhaltig. Einzelne Beutel werden gruppiert und über zwei seitliche Etikettierer mit perforierten Etiketten zum Multipack verbunden. Multipacks lassen sich stehend oder liegend umsetzen, optional mit Wiederverschlussetikett.</p>
-          <p style="margin-top: 16px; color: var(--text-secondary);">Bis zu 30 Multipacks pro Minute, Bündelgrößen von 2 bis 20 Stück. Maximale Formatflexibilität: Produktmaße 1–200 × 10–200 × 10–100 mm (L × B × H), Etikettenbreite 10–200 mm. Kompatibel mit nahezu jeder Beutelform — Doyzip, Vierrand- oder Schlauchbeutel — ideal für Nüsse, Trockenfrüchte, Riegel oder Kekse. Ein patentiertes Ausgleichselement kompensiert Höhendifferenzen bis 15 mm.</p>
-          <img src="assets/images/multipack-3er-bundle.jpg" alt="Multipack 3er-Bundle – Schema der etikettenbasierten Bündelung" width="1280" height="903" loading="lazy" style="width: 100%; max-width: 400px; height: auto; margin-top: 24px; border-radius: 8px;">
-          <a href="#kontakt" class="btn btn--outline" style="margin-top: 24px;">Mehr erfahren</a>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Specs Section -->
-  <section id="spezifikationen" class="specs" aria-labelledby="specs-title">
-    <div class="container">
-      <div class="reveal" style="text-align: center;">
-        <p class="section__label">Technische Daten</p>
-        <h2 id="specs-title" class="section__title">LEISTUNG AUF EINEN BLICK</h2>
-        <div class="divider" style="margin-left: auto; margin-right: auto;"></div>
-      </div>
-      <div class="specs__grid">
-        <div class="specs__card reveal reveal-delay-1">
-          <div class="specs__number">30</div>
-          <div class="specs__unit">Multipacks / min</div>
+    <!-- Preis-Sektion -->
+    <!--PREIS_TBD-->
+    <section class="section section-price" id="preise">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Preise – ehrlich eingeordnet</span>
+                <h2>Was kostet eine Multipackmaschine?</h2>
+                <p>Der Preis hängt stark von Konfiguration und Automatisierungsgrad ab – konkrete Richtwerte nennen wir Ihnen nach einem kurzen Gespräch. Die typischen Kostentreiber:</p>
+            </div>
+            <ul class="price-driver-list">
+                <li><svg class="li-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Taktleistung</strong> – wie viele Multipacks pro Minute Ihre Linie braucht</span></li>
+                <li><svg class="li-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Formatbereich</strong> – Produktmaße, Beutelformen und Bündelgrößen, die abgedeckt werden sollen</span></li>
+                <li><svg class="li-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Etikettier-Optionen</strong> – z.&nbsp;B. Wiederverschlussetikett oder bedruckte Etiketten</span></li>
+                <li><svg class="li-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Automatisierungsgrad der Zuführung</strong> – von manuell bis voll verkettet</span></li>
+                <li><svg class="li-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Hygiene-/Edelstahlausführung</strong> – z.&nbsp;B. für Lebensmittel, Pharma und Medizintechnik</span></li>
+                <li><svg class="li-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Linienintegration &amp; Steuerung</strong> – Anbindung an bestehende Anlagen und Systeme</span></li>
+            </ul>
+            <div class="price-closing">
+                <p>In einem <strong>30-Minuten-Gespräch</strong> grenzen wir Ihr Projekt kostenlos auf einen belastbaren Rahmen ein – ehrlich, ohne Verkaufsdruck.</p>
+                <a href="#kontakt" class="btn btn-primary btn-lg">Projekt einordnen lassen</a>
+            </div>
         </div>
-        <div class="specs__card reveal reveal-delay-2">
-          <div class="specs__number">4 M²</div>
-          <div class="specs__unit">Stellfläche</div>
-        </div>
-        <div class="specs__card reveal reveal-delay-3">
-          <div class="specs__number">2–20</div>
-          <div class="specs__unit">Stück pro Bündel</div>
-        </div>
-        <div class="specs__card reveal reveal-delay-4">
-          <div class="specs__number">bis 100</div>
-          <div class="specs__unit">Takte / min Zulauf</div>
-        </div>
-        <div class="specs__card reveal reveal-delay-5">
-          <div class="specs__number">1–200</div>
-          <div class="specs__unit">mm Produktlänge (B 10–200, H 10–100)</div>
-        </div>
-        <div class="specs__card reveal reveal-delay-6">
-          <div class="specs__number">15 mm</div>
-          <div class="specs__unit">Höhenausgleich (patentiert)</div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Applications Section -->
-  <section id="anwendungen" aria-labelledby="anwendungen-title">
-    <div class="container">
-      <div class="reveal">
-        <p class="section__label">Anwendungen</p>
-        <h2 id="anwendungen-title" class="section__title">BRANCHEN & PRODUKTE</h2>
-        <div class="divider"></div>
-        <p class="section__subtitle">Unsere Multipackmaschine ist vielseitig einsetzbar — von Lebensmitteln bis Medizintechnik.</p>
-      </div>
-      <div class="applications__grid">
-        <div class="applications__card reveal reveal-delay-1">
-          <h3>FOOD & NON-FOOD</h3>
-          <p>Nüsse, Trockenfrüchte, Müsliriegel, Kekse, Flowpacks und weitere Lebensmittelprodukte — auch unregelmäßig geformte Beutel werden zuverlässig gebündelt.</p>
+    <!-- Technische Daten -->
+    <section class="section" id="technik">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Spezifikationen</span>
+                <h2>Technische Daten im Überblick</h2>
+                <p>Alle Werte sind konfigurierbar – sprechen Sie uns für Ihre individuellen Anforderungen an.</p>
+            </div>
+            <div class="specs-table">
+                <div class="spec-row">
+                    <span class="spec-label">Leistung</span>
+                    <span class="spec-value">bis 30 Multipacks/min (produkt- und formatabhängig)</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Zulauf</span>
+                    <span class="spec-value">bis 100 Takte/min</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Bündelgröße</span>
+                    <span class="spec-value">2–20 Stk./Multipack (DUO, TRIO und größer)</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Produktmaße (L×B×H)</span>
+                    <span class="spec-value">1–200 × 10–200 × 10–100 mm</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Etikettenbreite</span>
+                    <span class="spec-value">10–200 mm</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Höhenausgleich</span>
+                    <span class="spec-value">bis 15 mm (patentiertes Ausgleichselement)</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Stellfläche</span>
+                    <span class="spec-value">unter 4 m² – kompakte, mobile (rollbare) Bauweise</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Beutelformen</span>
+                    <span class="spec-value">Doypack/Doyzip, Vierrand- und Schlauchbeutel u.&nbsp;a.</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Steuerung</span>
+                    <span class="spec-value">B&amp;R, SEW, Siemens, Schneider Electric, WAGO</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Ausführung</span>
+                    <span class="spec-value">Edelstahl in hygienegerechtem Design, SAP-Integration möglich</span>
+                </div>
+            </div>
         </div>
-        <div class="applications__card reveal reveal-delay-2">
-          <h3>PHARMA</h3>
-          <p>Blisterverpackungen, Faltschachteln und pharmazeutische Produkte sicher und präzise gebündelt.</p>
-        </div>
-        <div class="applications__card reveal reveal-delay-3">
-          <h3>KOSMETIK</h3>
-          <p>Tuben, Tiegel, Fläschchen und Kosmetikverpackungen attraktiv zusammengefasst für den Einzelhandel.</p>
-        </div>
-        <div class="applications__card reveal reveal-delay-4">
-          <h3>MEDIZINTECHNIK</h3>
-          <p>Medizinprodukte und sterile Verpackungen zuverlässig gebündelt — für höchste Anforderungen an Sauberkeit und Präzision.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Advantages Section -->
-  <section aria-labelledby="vorteile-title">
-    <div class="container">
-      <div class="reveal">
-        <p class="section__label">Ihre Vorteile</p>
-        <h2 id="vorteile-title" class="section__title">DARUM MULTIPACK</h2>
-        <div class="divider"></div>
-      </div>
-      <div class="advantages__list">
-        <div class="advantages__item reveal reveal-delay-1">
-          <div class="advantages__check">
-            <svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>
-          </div>
-          <p>Preiswerte und materialsparende Umverpackung</p>
+    <!-- Warum Benner MSA -->
+    <section class="section section-alt" id="warum">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Warum Benner MSA</span>
+                <h2>Vier Gründe, die den Unterschied machen</h2>
+            </div>
+            <div class="why-grid">
+                <div class="card why-card">
+                    <span class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+                    <div>
+                        <h3>Made in Stutensee</h3>
+                        <p>Konstruktion und Fertigung bei Karlsruhe – kurze Wege, direkte Kommunikation mit den Konstrukteuren, verlässliche deutsche Qualität.</p>
+                    </div>
+                </div>
+                <div class="card why-card">
+                    <span class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+                    <div>
+                        <h3>25+ Jahre Erfahrung</h3>
+                        <p>Seit über 25 Jahren bauen wir Sondermaschinen für die Verpackungsindustrie – dieses Know-how steckt in jeder Multipackmaschine.</p>
+                    </div>
+                </div>
+                <div class="card why-card">
+                    <span class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16.5 9.4 7.55 4.24"/><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.29 7 12 12 20.71 7"/><line x1="12" y1="22" x2="12" y2="12"/></svg></span>
+                    <div>
+                        <h3>Flexible End-of-Line-Lösung</h3>
+                        <p>Die wirtschaftliche Stufe zwischen Handarbeit und Vollautomation: kompakt, rollbar und damit flexibel an verschiedenen Linien einsetzbar.</p>
+                    </div>
+                </div>
+                <div class="card why-card">
+                    <span class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+                    <div>
+                        <h3>Alles aus einer Hand</h3>
+                        <p>Beratung, Konstruktion, Inbetriebnahme, Schulung, Ersatzteile – mit einem festen Ansprechpartner über die gesamte Lebensdauer.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="advantages__item reveal reveal-delay-2">
-          <div class="advantages__check">
-            <svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>
-          </div>
-          <p>Sehr niedriger Energieaufwand</p>
-        </div>
-        <div class="advantages__item reveal reveal-delay-3">
-          <div class="advantages__check">
-            <svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>
-          </div>
-          <p>Kompatibel mit nachhaltigen Packstoffen</p>
-        </div>
-        <div class="advantages__item reveal reveal-delay-4">
-          <div class="advantages__check">
-            <svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>
-          </div>
-          <p>Bedruckbare Etiketten mit Logo, Charge, Preis, Aktionscode oder Produktionsdaten</p>
-        </div>
-        <div class="advantages__item reveal reveal-delay-4">
-          <div class="advantages__check">
-            <svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>
-          </div>
-          <p>Front-, Rück- und schonende Seitenetikettierung — optional mit Wiederverschlussetikett</p>
-        </div>
-        <div class="advantages__item reveal reveal-delay-5">
-          <div class="advantages__check">
-            <svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>
-          </div>
-          <p>Kompaktes Design, einfache Integration in bestehende Linien</p>
-        </div>
-        <div class="advantages__item reveal reveal-delay-6">
-          <div class="advantages__check">
-            <svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>
-          </div>
-          <p>Patentiertes Ausgleichselement für Höhendifferenzen bis 15 mm</p>
-        </div>
-        <div class="advantages__item reveal reveal-delay-7">
-          <div class="advantages__check">
-            <svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>
-          </div>
-          <p>Effiziente Alternative zu kostenintensiver Handarbeit</p>
-        </div>
-        <div class="advantages__item reveal reveal-delay-8">
-          <div class="advantages__check">
-            <svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>
-          </div>
-          <p>SAP-Vollintegration möglich — stabile Prozesse und kürzeste Lieferzeiten</p>
-        </div>
-        <div class="advantages__item reveal reveal-delay-9">
-          <div class="advantages__check">
-            <svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>
-          </div>
-          <p>Steuerung: B&amp;R, SEW, Siemens, Schneider Electric, WAGO</p>
-        </div>
-        <div class="advantages__item reveal reveal-delay-9">
-          <div class="advantages__check">
-            <svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>
-          </div>
-          <p>Edelstahl-Ausführung in hygienegerechtem Design</p>
-        </div>
-        <div class="advantages__item reveal reveal-delay-9">
-          <div class="advantages__check">
-            <svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>
-          </div>
-          <p>Kompakte und mobile (rollbare) Bauweise — flexibel an verschiedenen Linien einsetzbar</p>
-        </div>
-        <div class="advantages__item reveal reveal-delay-9">
-          <div class="advantages__check">
-            <svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>
-          </div>
-          <p>Flexible End-of-Line-Lösung zwischen Handarbeit und Vollautomation</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA Section -->
-  <section id="kontakt" class="cta" aria-labelledby="cta-title">
-    <div class="container">
-      <div class="reveal">
-        <h2 id="cta-title" class="cta__title">BEREIT FÜR EFFIZIENTERES VERPACKEN?</h2>
-        <p class="section__subtitle" style="max-width: 100%; margin-bottom: 40px;">Fordern Sie jetzt Ihr individuelles Angebot an — unverbindlich und kostenlos.</p>
-        <a href="mailto:info@benner-msa.de?subject=Anfrage%20Multipackmaschine" class="btn btn--primary">Angebot anfragen</a>
-        <p class="cta__phone">Oder rufen Sie uns an: <a href="tel:+4972449476400">+49 7244 9476-400</a></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer" role="contentinfo">
-    <div class="container">
-      <div class="footer__inner">
-        <div class="footer__company">
-          <strong>Benner MSA GmbH</strong><br>
-          Am Hasenbiel 6, 76297 Stutensee
+    <!-- FAQ -->
+    <section class="section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Fragen &amp; Antworten</span>
+                <h2>Häufig gestellte Fragen</h2>
+            </div>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>Was kostet eine Multipackmaschine?</summary>
+                    <p>Der Preis hängt stark von Konfiguration und Automatisierungsgrad ab – vor allem von Taktleistung, Formatbereich, Etikettier-Optionen und Linienintegration. Konkrete Richtwerte nennen wir Ihnen nach einem kurzen Gespräch – die typischen Kostentreiber finden Sie in unserer <a href="#preise">Preis-Einordnung</a>.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Für welche Produkte und Beutelformen ist die Maschine geeignet?</summary>
+                    <p>Für nahezu jede Beutelform: Doypack/Doyzip, Vierrand- oder Schlauchbeutel – auch unregelmäßig geformte Beutel werden zuverlässig gebündelt. Typische Produkte sind Nüsse, Trockenfrüchte, Müsliriegel, Kekse und andere Flowpacks. Auch für Pharma, Kosmetik und Medizintechnik ist die Maschine einsetzbar.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Wie unterscheidet sich das etikettenbasierte Bündeln vom Schrumpfen?</summary>
+                    <p>Beim Schrumpfen wird jedes Bündel vollflächig in Folie gehüllt und im Tunnel erhitzt. Das Multipack kommt ohne Hitze aus: Perforierte Etiketten verbinden die Beutel mechanisch. Das spart Energie, schont die Produkte, verbraucht deutlich weniger Material und ist mit nachhaltigen Packstoffen kompatibel.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Welche Bündelgrößen sind möglich?</summary>
+                    <p>Von DUO und TRIO bis zu großen Bündeln: 2 bis 20 Stück pro Multipack. Die fertigen Multipacks lassen sich stehend oder liegend an die Linie übergeben.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Können die Etiketten bedruckt werden?</summary>
+                    <p>Ja. Möglich sind Logo, Chargennummer, Preis, Aktionscode oder Produktionsdaten – so wird das Etikett gleichzeitig Verbindung, Verpackung und Informationsträger.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Was passiert bei unterschiedlich hohen Beuteln?</summary>
+                    <p>Ein patentiertes Ausgleichselement kompensiert Höhendifferenzen von bis zu 15&nbsp;mm – die Etikettierung bleibt auch bei ungleichmäßig gefüllten Beuteln sauber und zuverlässig.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Lässt sich die Maschine in bestehende Produktionslinien integrieren?</summary>
+                    <p>Ja, dafür ist sie gebaut: unter 4&nbsp;m² Stellfläche, mobile (rollbare) Bauweise und Steuerungen von B&amp;R, SEW, Siemens, Schneider Electric oder WAGO. Auch eine SAP-Integration ist möglich – die Integration planen wir bereits in der Angebotsphase mit Ihnen.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Gibt es eine Wiederverschluss-Option?</summary>
+                    <p>Ja. Auf Wunsch erhält das Multipack ein Wiederverschlussetikett – praktisch für Endkunden, die das Bündel öffnen und einzelne Beutel entnehmen möchten.</p>
+                </details>
+            </div>
         </div>
-        <div class="footer__links">
-          <a href="/impressum">Impressum</a>
-          <a href="/datenschutz">Datenschutz</a>
+    </section>
+
+    <!-- Kontakt -->
+    <section class="section section-alt" id="kontakt">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <span class="section-tag">Kontakt</span>
+                    <h2>Lassen Sie sich kostenlos beraten</h2>
+                    <p>Erzählen Sie uns von Ihrem Produkt und Ihrer Linie – wir konfigurieren die passende Multipackmaschine und grenzen den Preisrahmen belastbar ein.</p>
+                    <div class="card person-card">
+                        <img src="assets/images/ansprechpartner.webp" alt="Ilyas Zorla, Geschäftsführer der Benner MSA GmbH" loading="lazy" width="470" height="540">
+                        <div class="person-body">
+                            <p class="person-name">Ilyas Zorla</p>
+                            <p class="person-role">Geschäftsführer · Ihr Ansprechpartner für Multipackmaschinen</p>
+                            <p class="person-contact">Tel: <a href="tel:+4972449476400">07244 947640-0</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+                            <div>
+                                <strong>Telefon</strong>
+                                <a href="tel:+4972449476400">07244 947640-0</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,7 12,13 2,7"/></svg></span>
+                            <div>
+                                <strong>E-Mail</strong>
+                                <a href="mailto:info@benner-msa.de">info@benner-msa.de</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+                            <div>
+                                <strong>Adresse</strong>
+                                Benner MSA GmbH<br>Am Hasenbiel 6<br>76297 Stutensee-Blankenloch
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card contact-form-wrap">
+                    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="7ddc81ba-1fdb-4348-8470-b73b24e0beba">
+                        <input type="hidden" name="subject" value="Neue Anfrage über Multipackmaschinen.de">
+                        <input type="hidden" name="from_name" value="Multipackmaschinen.de Kontaktformular">
+                        <input type="hidden" name="redirect" value="https://multipackmaschinen.de/danke.html">
+                        <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" aria-hidden="true">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Unternehmen</label>
+                            <input type="text" id="company" name="company" autocomplete="organization">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-Mail *</label>
+                            <input type="email" id="email" name="email" required autocomplete="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefon</label>
+                            <span class="field-hint">optional – für schnelle Rückfragen</span>
+                            <input type="tel" id="phone" name="phone" autocomplete="tel">
+                        </div>
+                        <div class="form-group">
+                            <label for="product">Was soll gebündelt werden?</label>
+                            <input type="text" id="product" name="produkt" placeholder="z. B. Doypacks mit Nüssen, Riegel, Kekse …">
+                        </div>
+                        <div class="form-group">
+                            <label for="branche">Branche</label>
+                            <span class="select-wrap">
+                                <select id="branche" name="branche">
+                                    <option value="" selected>Bitte wählen (optional)</option>
+                                    <option value="Lebensmittel">Lebensmittel</option>
+                                    <option value="Pharma & Medizintechnik">Pharma &amp; Medizintechnik</option>
+                                    <option value="Kosmetik">Kosmetik</option>
+                                    <option value="Non-Food">Non-Food</option>
+                                    <option value="Andere">Andere</option>
+                                </select>
+                            </span>
+                        </div>
+                        <div class="form-group form-full">
+                            <label for="message">Ihre Anforderungen</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Beschreiben Sie Ihr Produkt, die gewünschte Bündelgröße und den Durchsatz …"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg btn-full form-full">Anfrage senden – Antwort binnen 24&nbsp;h</button>
+                        <p class="form-note">Kostenlos &amp; unverbindlich. Ihre Daten nutzen wir nur zur Bearbeitung der Anfrage – siehe <a href="/datenschutz" style="color: var(--red);">Datenschutzerklärung</a>.</p>
+                    </form>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="footer__links" style="margin-top: 16px; padding-top: 16px; border-top: 1px solid #1a1a1a;">
-          <a href="https://www.benner-msa.de" target="_blank" rel="noopener noreferrer">Benner MSA GmbH</a>
-          <a href="https://www.puffertisch24.de" target="_blank" rel="noopener noreferrer">Puffertische</a>
-          <a href="https://banderoliermaschinen24.de" target="_blank" rel="noopener noreferrer">Banderoliermaschinen</a>
-      </div>
-      <div class="footer__copy">
-        &copy; 2026 Benner MSA GmbH. Alle Rechte vorbehalten.
-      </div>
-    </div>
-  </footer>
+    </section>
 
-  <script>
-    /* ===== Navbar Scroll Effect ===== */
-    (function() {
-      var nav = document.querySelector('.nav');
-      var scrollThreshold = 60;
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="/" class="brand" aria-label="Multipackmaschinen – Startseite">
+                    <svg class="brand-mark" width="32" height="32" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+                        <rect x="4" y="7" width="10" height="30" rx="2" stroke="#FFFFFF" stroke-width="3"/>
+                        <rect x="17" y="7" width="10" height="30" rx="2" stroke="#FFFFFF" stroke-width="3"/>
+                        <rect x="30" y="7" width="10" height="30" rx="2" stroke="#FFFFFF" stroke-width="3"/>
+                        <rect x="1" y="17" width="42" height="10" rx="1.5" fill="#D02C2F"/>
+                    </svg>
+                    <span class="brand-text">
+                        <span class="brand-name">MULTIPACK<span class="brand-red">MASCHINEN</span></span>
+                        <span class="brand-claim">ein Produkt der Benner MSA GmbH</span>
+                    </span>
+                </a>
+                <p>Ein Produkt der <a href="https://www.benner-msa.de" target="_blank" rel="noopener noreferrer">Benner MSA GmbH</a>.<br>Verpackungsmaschinenbau aus Stutensee.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Produkt</h4>
+                <ul>
+                    <li><a href="#maschine">Multipackmaschine</a></li>
+                    <li><a href="#technik">Technische Daten</a></li>
+                    <li><a href="#preise">Preise</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Benner-Familie</h4>
+                <ul>
+                    <li><a href="https://www.benner-msa.de" target="_blank" rel="noopener noreferrer">Benner MSA GmbH</a></li>
+                    <li><a href="https://banderoliermaschinen24.de" target="_blank" rel="noopener noreferrer">Banderoliermaschinen</a></li>
+                    <li><a href="https://www.puffertisch24.de" target="_blank" rel="noopener noreferrer">Puffertische</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Kontakt</h4>
+                <ul>
+                    <li><a href="tel:+4972449476400">07244 947640-0</a></li>
+                    <li><a href="mailto:info@benner-msa.de">info@benner-msa.de</a></li>
+                    <li><a href="/kontakt">Kontaktseite</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Rechtliches</h4>
+                <ul>
+                    <li><a href="/datenschutz">Datenschutzerklärung</a></li>
+                    <li><a href="/impressum">Impressum</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2026 Benner MSA GmbH. Alle Rechte vorbehalten. Multipackmaschinen Made in Germany.</p>
+            </div>
+        </div>
+    </footer>
 
-      function onScroll() {
-        if (window.scrollY > scrollThreshold) {
-          nav.classList.add('scrolled');
-        } else {
-          nav.classList.remove('scrolled');
-        }
-      }
-
-      window.addEventListener('scroll', onScroll, { passive: true });
-      onScroll();
-    })();
-
-    /* ===== Mobile Menu ===== */
-    (function() {
-      var hamburger = document.querySelector('.nav__hamburger');
-      var navLinks = document.querySelector('.nav__links');
-      var overlay = document.querySelector('.nav__overlay');
-      var links = navLinks.querySelectorAll('a');
-
-      function toggleMenu() {
-        var isOpen = navLinks.classList.toggle('open');
-        hamburger.classList.toggle('active');
-        overlay.classList.toggle('active');
-        hamburger.setAttribute('aria-expanded', isOpen);
-        hamburger.setAttribute('aria-label', isOpen ? 'Menü schließen' : 'Menü öffnen');
-        document.body.style.overflow = isOpen ? 'hidden' : '';
-      }
-
-      function closeMenu() {
-        navLinks.classList.remove('open');
-        hamburger.classList.remove('active');
-        overlay.classList.remove('active');
-        hamburger.setAttribute('aria-expanded', 'false');
-        hamburger.setAttribute('aria-label', 'Menü öffnen');
-        document.body.style.overflow = '';
-      }
-
-      hamburger.addEventListener('click', toggleMenu);
-      overlay.addEventListener('click', closeMenu);
-
-      for (var i = 0; i < links.length; i++) {
-        links[i].addEventListener('click', closeMenu);
-      }
-    })();
-
-    /* ===== Scroll Reveal (IntersectionObserver) ===== */
-    (function() {
-      var reveals = document.querySelectorAll('.reveal');
-
-      if ('IntersectionObserver' in window) {
-        var observer = new IntersectionObserver(function(entries) {
-          entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
-              observer.unobserve(entry.target);
-            }
-          });
-        }, {
-          threshold: 0.12,
-          rootMargin: '0px 0px -40px 0px'
-        });
-
-        reveals.forEach(function(el) {
-          observer.observe(el);
-        });
-      } else {
-        /* Fallback: show all immediately */
-        reveals.forEach(function(el) {
-          el.classList.add('visible');
-        });
-      }
-    })();
-  </script>
-
+    <script src="assets/script.js"></script>
 </body>
 </html>
