@@ -1,3 +1,33 @@
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 Sitemap: https://multipackmaschinen.de/sitemap.xml
+
+# --- KI-Crawler-Politik (Stand 14.08.2026) ---
+# Sichtbarkeit in KI-Antworten ist erwuenscht, Nutzung zum Modelltraining nicht.
+# Ausdruecklich WILLKOMMEN (Antwort- und Suchcrawler): OAI-SearchBot, ChatGPT-User,
+# ClaudeBot, Claude-SearchBot, Claude-User, PerplexityBot, Perplexity-User,
+# Google-Extended, Applebot, Amazonbot, Googlebot, Bingbot.
+# Reine Trainings-Crawler sind unten ausgeschlossen und werden zusaetzlich
+# serverseitig abgewiesen.
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
