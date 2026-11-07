@@ -12,44 +12,52 @@
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-    <link rel="stylesheet" href="assets/fonts/fonts.css">
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+<a class="skip" href="#inhalt">Zum Inhalt springen</a>
 
-    <!-- Header -->
-    <header class="site-header" id="siteHeader">
-        <div class="container nav-container">
-            <a href="/" class="brand" aria-label="Multipackmaschinen – Startseite">
-                <svg class="brand-mark" width="40" height="40" viewBox="0 0 44 44" fill="none" aria-hidden="true">
-                    <rect x="4" y="7" width="10" height="30" rx="2" stroke="#1B1F24" stroke-width="3"/>
-                    <rect x="17" y="7" width="10" height="30" rx="2" stroke="#1B1F24" stroke-width="3"/>
-                    <rect x="30" y="7" width="10" height="30" rx="2" stroke="#1B1F24" stroke-width="3"/>
-                    <rect x="1" y="17" width="42" height="10" rx="1.5" fill="#D02C2F"/>
-                </svg>
-                <span class="brand-text">
-                    <span class="brand-name">MULTIPACK<span class="brand-red">MASCHINEN</span></span>
-                    <span class="brand-claim">ein Produkt der Benner MSA GmbH</span>
-                </span>
-            </a>
-            <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navLinks">
-                <span></span><span></span><span></span>
-            </button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="/#maschine">Maschine</a></li>
-                <li><a href="/#funktion">Funktionsweise</a></li>
-                <li><a href="/#preise">Preise</a></li>
-                <li><a href="/#technik">Technische Daten</a></li>
-                <li><a href="/#faq">FAQ</a></li>
-                <li><a href="/#kontakt" class="btn">Anfrage senden</a></li>
-            </ul>
-        </div>
-    </header>
+    <!--P:header-->
+<header class="hdr" id="siteHeader">
+  <div class="container hdr-in">
+    <a href="/" class="brand">
+      <svg class="brand-mark" width="36" height="36" viewBox="0 0 44 44" fill="none" aria-hidden="true"><rect x="4" y="7" width="10" height="30" rx="2" stroke="#181C21" stroke-width="3"/><rect x="17" y="7" width="10" height="30" rx="2" stroke="#181C21" stroke-width="3"/><rect x="30" y="7" width="10" height="30" rx="2" stroke="#181C21" stroke-width="3"/><rect x="1" y="17" width="42" height="10" rx="1.5" fill="#AF0104"/></svg>
+      <span class="brand-text"><span class="brand-name">MULTIPACK<span class="brand-red">MASCHINEN</span></span> <span class="brand-claim">ein Produkt der Benner MSA GmbH</span><span class="sr"> – Startseite</span></span>
+    </a>
+    <nav class="nav" aria-label="Hauptnavigation">
+      <ul class="nav-links">
+        <li><a href="/loesung">Lösung</a></li>
+        <li><a href="/maschinen">Maschinen</a></li>
+        <li><a href="/kostenrechner">Kostenrechner</a></li>
+        <li><a href="/anwendungen">Anwendungen</a></li>
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/ueber-uns">Über uns</a></li>
+      </ul>
+      <a class="tel" href="tel:+4972449476400" aria-label="Anrufen: 07244 9476-400"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="tel-n">07244 9476-400</span></a>
+      <a class="btn btn-primary btn-sm" href="/kontakt"><span class="lg-only">Projekt anfragen</span><span class="sm-only">Anfragen</span></a>
+      <details class="mnav">
+        <summary><span class="sr">Menü</span><span class="burger" aria-hidden="true"><i></i><i></i><i></i></span></summary>
+        <ul>
+          <li><a href="/loesung">Lösung</a></li>
+          <li><a href="/maschinen">Maschinen</a></li>
+          <li><a href="/kostenrechner">Kostenrechner</a></li>
+          <li><a href="/anwendungen">Anwendungen</a></li>
+          <li><a href="/faq">FAQ</a></li>
+          <li><a href="/ueber-uns">Über uns</a></li>
+          <li class="mnav-sep"><a href="/kontakt">Kontakt &amp; Anfrage</a></li>
+          <li><a href="tel:+4972449476400">Lieber anrufen? 07244&nbsp;9476&#8209;400 · Mo–Fr 08:00–17:00 Uhr</a></li>
+          <li><a href="/kontakt?art=muster">Beutel prüfen lassen</a></li>
+        </ul>
+      </details>
+    </nav>
+  </div>
+</header>
+<!--/P:header-->
 
-    <!-- Content -->
-    <section class="section">
+        <main id="inhalt" class="section legal">
         <div class="container">
             <div class="legal-wrap">
+                <nav class="bc" aria-label="Brotkrumen"><ol class="crumbs"><li><a href="/">Startseite</a></li><li><span aria-current="page">Datenschutz</span></li></ol></nav>
                 <h1>Datenschutzerklärung</h1>
 
                 <div class="legal-card">
@@ -95,6 +103,9 @@
                         Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt. Zwingende gesetzliche Bestimmungen — insbesondere Aufbewahrungsfristen — bleiben unberührt.
                     </p>
                     <p>
+                        Pflichtangaben sind die Art der Anfrage, Ihr Name, Ihr Unternehmen und Ihre E-Mail-Adresse, bei einer Rückrufbitte zusätzlich Ihre Telefonnummer. Freiwillig sind Telefon, Produkt, Anzahl der Formate, Branche und Ihre Nachricht. Je nach Anfrageart erheben wir zusätzlich Ihre gewünschte Rückrufzeit oder Angaben zu Bündelgröße und Beutelmaß sowie die Seite, über die Sie die Anfrage gestellt haben. Für diese Angaben gelten dieselben Rechtsgrundlagen wie oben.
+                    </p>
+                    <p>
                         Zur Verarbeitung der Formulardaten nutzen wir den Dienst Web3Forms. Die Daten werden dabei an die Server von Web3Forms übermittelt. Weitere Informationen finden Sie in der Datenschutzerklärung von Web3Forms unter <a href="https://web3forms.com/privacy" target="_blank" rel="noopener noreferrer">https://web3forms.com/privacy</a>.
                     </p>
                 </div>
@@ -119,10 +130,10 @@
                 <div class="legal-card">
                     <h2>6. Hosting</h2>
                     <p>
-                        Diese Website wird bei GitHub Pages gehostet. Der Anbieter ist GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA. Beim Aufruf dieser Website werden durch GitHub automatisch Informationen erfasst und in sogenannten Server-Log-Dateien gespeichert.
+                        Diese Website wird über GitHub Pages (GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA) bereitgestellt und über Cloudflare (Cloudflare, Inc., 101 Townsend St, San Francisco, CA 94107, USA) ausgeliefert. Cloudflare ist zugleich Content Delivery Network (CDN) und DNS-Anbieter dieser Website. Beim Aufruf der Website verarbeiten beide Anbieter Server-Logdaten einschließlich Ihrer IP-Adresse. Cloudflare kann technisch notwendige Cookies setzen, um die Funktionalität und Sicherheit der Website zu gewährleisten.
                     </p>
                     <p>
-                        Zusätzlich wird Cloudflare als Content Delivery Network (CDN) und DNS-Anbieter eingesetzt. Cloudflare, Inc., 101 Townsend St, San Francisco, CA 94107, USA. Cloudflare kann technisch notwendige Cookies setzen, um die Funktionalität und Sicherheit der Website zu gewährleisten.
+                        Die Übermittlung personenbezogener Daten in die USA stützt sich auf das EU-US Data Privacy Framework, ergänzend auf Standardvertragsklauseln.
                     </p>
                     <p>
                         Die Nutzung von GitHub Pages und Cloudflare erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an einer zuverlässigen und sicheren Darstellung unserer Website.
@@ -152,74 +163,38 @@
                     </p>
                 </div>
 
-                <p class="legal-meta">Stand: April 2026</p>
+                <p class="legal-meta">Stand: November 2026</p>
 
                 <div class="legal-actions">
                     <a href="/" class="btn btn-outline">← Zurück zur Startseite</a>
                     <a href="/impressum" class="btn btn-outline">Impressum</a>
                 </div>
+                <p class="small-note legal-cta">Fragen zu Multipackmaschinen? <a href="tel:+4972449476400">07244&nbsp;9476&#8209;400</a> · <a class="go" href="/kontakt">Anfrage senden</a></p>
             </div>
         </div>
-    </section>
+    </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container footer-container">
-            <div class="footer-brand">
-                <a href="/" class="brand" aria-label="Multipackmaschinen – Startseite">
-                    <svg class="brand-mark" width="32" height="32" viewBox="0 0 44 44" fill="none" aria-hidden="true">
-                        <rect x="4" y="7" width="10" height="30" rx="2" stroke="#FFFFFF" stroke-width="3"/>
-                        <rect x="17" y="7" width="10" height="30" rx="2" stroke="#FFFFFF" stroke-width="3"/>
-                        <rect x="30" y="7" width="10" height="30" rx="2" stroke="#FFFFFF" stroke-width="3"/>
-                        <rect x="1" y="17" width="42" height="10" rx="1.5" fill="#D02C2F"/>
-                    </svg>
-                    <span class="brand-text">
-                        <span class="brand-name">MULTIPACK<span class="brand-red">MASCHINEN</span></span>
-                        <span class="brand-claim">ein Produkt der Benner MSA GmbH</span>
-                    </span>
-                </a>
-                <p>Ein Produkt der <a href="https://www.benner-msa.de" target="_blank" rel="noopener noreferrer">Benner MSA GmbH</a>.<br>Verpackungsmaschinenbau aus Stutensee.</p>
-            </div>
-            <div class="footer-links">
-                <h4>Produkt</h4>
-                <ul>
-                    <li><a href="/#maschine">Multipackmaschine</a></li>
-                    <li><a href="/#technik">Technische Daten</a></li>
-                    <li><a href="/#preise">Preise</a></li>
-                    <li><a href="/#faq">FAQ</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h4>Benner-Familie</h4>
-                <ul>
-                    <li><a href="https://www.benner-msa.de" target="_blank" rel="noopener noreferrer">Benner MSA GmbH</a></li>
-                    <li><a href="https://banderoliermaschinen24.de" target="_blank" rel="noopener noreferrer">Banderoliermaschinen</a></li>
-                    <li><a href="https://www.puffertisch24.de" target="_blank" rel="noopener noreferrer">Puffertische</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h4>Kontakt</h4>
-                <ul>
-                    <li><a href="tel:+4972449476400">07244 947640-0</a></li>
-                    <li><a href="mailto:info@benner-msa.de">info@benner-msa.de</a></li>
-                    <li><a href="/kontakt">Kontaktseite</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h4>Rechtliches</h4>
-                <ul>
-                    <li><a href="/datenschutz">Datenschutzerklärung</a></li>
-                    <li><a href="/impressum">Impressum</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <p>© 2026 Benner MSA GmbH. Alle Rechte vorbehalten. Multipackmaschinen Made in Germany.</p>
-            </div>
-        </div>
-    </footer>
+    <!--P:footer-->
+<footer class="ftr">
+  <div class="container ftr-grid">
+    <div class="ftr-brand">
+      <a href="/" class="brand brand-inv" aria-label="Multipackmaschinen – Startseite">
+        <svg class="brand-mark" width="32" height="32" viewBox="0 0 44 44" fill="none" aria-hidden="true"><rect x="4" y="7" width="10" height="30" rx="2" stroke="#FFFFFF" stroke-width="3"/><rect x="17" y="7" width="10" height="30" rx="2" stroke="#FFFFFF" stroke-width="3"/><rect x="30" y="7" width="10" height="30" rx="2" stroke="#FFFFFF" stroke-width="3"/><rect x="1" y="17" width="42" height="10" rx="1.5" fill="#F47C7C"/></svg>
+        <span class="brand-text"><span class="brand-name">MULTIPACK<span class="brand-red">MASCHINEN</span></span></span>
+      </a>
+      <p>Multipackmaschinen mit Etikett für Beutel und Flowpacks. Ein Produkt der <a href="https://benner-msa.de">Benner MSA GmbH</a>, Stutensee bei Karlsruhe.</p>
+    </div>
+    <div><p class="ftr-h">Multipack</p><ul><li><a href="/maschinen#etikett-multipackmaschine">Etikett-Multipackmaschine</a></li><li><a href="/maschinen#multiformat">Multiformat als Projektlösung</a></li><li><a href="/maschinen#technik">Technische Daten</a></li><li><a href="/maschinen#preise">Preise</a></li></ul></div>
+    <div><p class="ftr-h">Wissen</p><ul><li><a href="/loesung#etikett-multipack">Was ist ein Etikett-Multipack?</a></li><li><a href="/loesung#abgrenzung">Etikett oder Schrumpffolie?</a></li><li><a href="/kostenrechner">Kostenrechner</a></li><li><a href="/anwendungen">Anwendungen</a></li><li><a href="/faq">Häufige Fragen</a></li><li><a href="/ueber-uns">Über uns</a></li></ul></div>
+    <div><p class="ftr-h">Kontakt</p><ul><li><a href="tel:+4972449476400">07244&nbsp;9476&#8209;400</a> · Mo–Fr 08:00–17:00 Uhr</li><li><a href="mailto:info@benner-msa.de">info@benner-msa.de</a></li><li>Benner MSA GmbH · Am Hasenbiel 6 · 76297 Stutensee-Blankenloch</li><li><a href="/kontakt">Anfrage · Rückruf · Muster</a></li><li>Antwort binnen 1 Arbeitstag</li></ul></div>
+    <div><p class="ftr-h">Benner-Familie</p><ul><li><a href="https://benner-msa.de">Benner MSA GmbH: Sondermaschinenbau für Verpackung</a></li><li><a href="https://banderoliermaschinen24.de">Banderolieren: banderoliermaschinen24.de</a></li><li><a href="https://www.puffertisch24.de">Puffertische: puffertisch24.de</a></li></ul><p class="ftr-h ftr-h-2">Rechtliches</p><ul><li><a href="/impressum">Impressum</a></li><li><a href="/datenschutz">Datenschutzerklärung</a></li></ul></div>
+  </div>
+  <div class="container ftr-bottom">
+    <p>© 2026 Benner MSA GmbH · Multipackmaschinen, konstruiert und gebaut in Stutensee</p>
+  </div>
+</footer>
+<!--/P:footer-->
 
-    <script src="assets/script.js"></script>
+    <script src="assets/script.js" defer></script>
 </body>
 </html>
