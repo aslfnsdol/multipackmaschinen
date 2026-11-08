@@ -30,15 +30,37 @@
     document.addEventListener('click', function (e) { var a = e.target.closest('[data-formate]'); if (a) sel.value = a.getAttribute('data-formate'); });
   }
 })();
-// Lösungsseite: Ablauf-Schema auf Knopfdruck abspielen (ohne JS bleibt das Standbild)
+// Lösungsseite: Ablauf-Animation (#lpa). Ersetzt in assets/script.js den Block „Lösungsseite: Ablauf-Schema auf Knopfdruck…“ (Z. 33–44).
+// Ohne JS bleibt das Standbild. Läuft nur, solange der Abschnitt sichtbar ist; Knopf hält an (WCAG 2.2.2).
 (function () {
-  var b = document.querySelector('[data-lp-play]');
-  if (!b) return;
-  var fig = document.getElementById(b.getAttribute('aria-controls')), st = document.getElementById('lp-status');
-  b.hidden = false;
+  var fig = document.getElementById('lpa'), b = document.querySelector('[data-lpa]'), st = document.getElementById('lpa-status');
+  if (!fig || !b || !st) return;
+  var rm = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var seen = false, vis = false, user = false;
+  var RM = 'Standbild, weil Ihr Gerät reduzierte Bewegung wünscht. ';
+  var TXT = 'Beutel laufen ein und stapeln sich, zwei Etikettierer setzen je ein Etikett, das Multipack läuft aus.';
+  function sync() {
+    if (rm.matches) {
+      fig.classList.remove('lpa-on', 'lpa-hold'); b.hidden = true;
+      st.textContent = RM + TXT;
+      return;
+    }
+    if (st.textContent.indexOf(RM) === 0) st.textContent = '';
+    b.hidden = false;
+    if (seen) fig.classList.add('lpa-on');
+    fig.classList.toggle('lpa-hold', !vis || user);
+    b.textContent = user ? 'Abspielen' : 'Anhalten';
+  }
   b.addEventListener('click', function () {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { st.textContent = 'Animation ausgeschaltet, weil Ihr Gerät reduzierte Bewegung wünscht.'; return; }
-    fig.classList.remove('is-run'); void fig.getBoundingClientRect(); fig.classList.add('is-run');
-    st.textContent = 'Ablauf: Einzelbeutel, Etikett links und rechts, fertiges Bündel, eine Packung wird abgetrennt.';
+    user = !user; seen = true; sync();
+    st.textContent = user ? 'Animation angehalten.' : 'Animation läuft: ' + TXT;
   });
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (e) {
+      vis = e[0].isIntersecting; if (vis) seen = true;
+      sync();
+    }, { threshold: 0.35 }).observe(fig);
+  } else seen = vis = true;
+  if (rm.addEventListener) rm.addEventListener('change', sync);
+  sync();
 })();
