@@ -1,6 +1,6 @@
 /* Kostenrechner Etikett-Multipack vs. Schrumpffolie. Formeln laut nacht/02 §5.2, stehen auch sichtbar auf der Seite.
    Hauptergebnis (Review 1): Grenz-Etikettenpreis aus den Werten des Kunden; Spanne in € nur sekundär.
-   Ohne JS bleibt das statische Rechenbeispiel (Beispielwerte) stehen. */
+   Startet ohne Vorbelegung (Entscheidung Frage 11: leer). Ohne JS steht ein Hinweis da. */
 (function () {
   'use strict';
   var f = document.getElementById('calc');
@@ -33,21 +33,32 @@
     if (same.checked) inp.hM.value = inp.hT.value;
     inp.hM.readOnly = same.checked;
     [].forEach.call(f.querySelectorAll('.field.is-invalid'), function (c) { c.classList.remove('is-invalid'); });
-    var v = {}, ok = true;
+    // Startet leer. Pflichtwerte fehlen → neutraler Hinweis, welche Werte noch fehlen. Optionale Felder zählen leer als 0.
+    var REQ = { M: 'Multipacks pro Jahr', gF: 'Folie je Multipack', pF: 'Folienpreis', PT: 'Leistung Schrumpftunnel', hT: 'Betriebsstunden Tunnel',
+      pE: 'Strompreis', e: 'Etiketten je Multipack', pL: 'Etikettenpreis', PM: 'Leistung Maschine', hM: 'Betriebsstunden Maschine' };
+    var v = {}, ok = true, fehlt = [];
     Object.keys(inp).forEach(function (k) {
-      var n = num(inp[k].value), l = LIM[k.replace(/[01]$/, '')], bad = isNaN(n) || (l && (n < l[0] || n > l[1]));
+      var base = k.replace(/[01]$/, ''), raw = String(inp[k].value).trim(), l = LIM[base];
+      if (raw === '') {
+        mark(inp[k], false);
+        if (REQ[base]) { if (fehlt.indexOf(REQ[base]) < 0) fehlt.push(REQ[base]); }
+        v[k] = 0; return;
+      }
+      var n = num(raw), bad = isNaN(n) || (l && (n < l[0] || n > l[1]));
       mark(inp[k], bad); if (bad) ok = false; v[k] = n;
     });
     ['gF', 'pF', 'pL'].forEach(function (k) {   // von > bis: nicht still tauschen, sondern am Feld melden
-      if (v[k + '0'] > v[k + '1']) { mark(inp[k + '0'], true); mark(inp[k + '1'], true); ok = false; }
+      if (inp[k + '0'].value.trim() && inp[k + '1'].value.trim() && v[k + '0'] > v[k + '1']) { mark(inp[k + '0'], true); mark(inp[k + '1'], true); ok = false; }
     });
     var verdict = $('c-verdict');
-    if (!ok) {
+    if (!ok || fehlt.length) {
       $('c-thr').firstChild.nodeValue = '—';
       $('c-span').firstChild.nodeValue = 'Unterschied pro Jahr: —';
-      verdict.innerHTML = '<p>Ergebnis: —. Bitte prüfen Sie die markierten Felder.</p>';
+      verdict.innerHTML = !ok ? '<p>Ergebnis: —. Bitte prüfen Sie die markierten Felder.</p>'
+        : '<p>Es fehlen noch: ' + fehlt.join(', ') + '. Das Ergebnis erscheint, sobald diese Werte eingetragen sind.</p>';
       [].forEach.call(document.querySelectorAll('.result-table td, #r-kg, #r-kwh, #r-pk'), function (c) { c.textContent = '—'; });
-      document.querySelector('.result').classList.add('is-stale');
+      document.querySelector('.result').classList.toggle('is-stale', !ok);
+      $('c-send').href = sendBase + '?art=anfrage&quelle=rechner&formate=offen#anfrage';
       return;
     }
     var KF0 = v.M * v.gF0 / 1000 * v.pF0, KF1 = v.M * v.gF1 / 1000 * v.pF1, KFm = v.M * (v.gF0 + v.gF1) / 2000 * (v.pF0 + v.pF1) / 2;
@@ -63,8 +74,8 @@
     $('c-thr').firstChild.nodeValue = (tf(t0) === tf(t1) ? tf(t0) : tf(t0) + ' – ' + tf(t1)) + ' € je 1.000 Etiketten';
     $('c-span').firstChild.nodeValue = 'Unterschied pro Jahr: im Mittel ' + sg(dmid) + ' €, Spanne ' + sg(dmin) + ' bis ' + sg(dmax) + ' €';
     var a = nf.format(Math.abs(rd(dmin, 100))) + ' €', b = nf.format(Math.abs(rd(dmax, 100))) + ' €', h;
-    if (dmin > 0) h = '<p><strong>In diesem Rechenbeispiel ist das Etikett-Multipack günstiger.</strong> Mit Ihren Werten sparen Sie laufende Kosten von ' + a + ' bis ' + b + ' pro Jahr' + (XH > 0 ? ' (inkl. Personal)' : ' an Folie und Energie') + '. Die Investition ist nicht enthalten. Lassen Sie uns die Rechnung mit Ihren echten Daten prüfen.</p>';
-    else if (dmax < 0) h = '<p><strong>In diesem Rechenbeispiel ist Schrumpfen günstiger.</strong> Die laufenden Kosten liegen beim Schrumpfen pro Jahr zwischen ' + b + ' und ' + a + ' niedriger. Dann spricht der Preis nicht für das Etikett-Multipack.</p><p>Es kann trotzdem passen, wenn andere Punkte für Sie zählen: Ihr Produkt verträgt keine Wärme, der Handel will einzeln abtrennbare Packungen, oder in der Linie ist kein Platz für einen Tunnel.</p><p><strong>Nicht passend ist das Etikett-Multipack</strong> für Bündel, die rundum geschützt sein müssen, für Getränke und für Großserien mit einem Format und sehr hohen Taktzahlen. Dort bleiben Sie bei Schrumpffolie oder einer Großserienanlage besser.</p>';
+    if (dmin > 0) h = '<p><strong>Mit Ihren Werten ist das Etikett-Multipack günstiger.</strong> Sie sparen laufende Kosten von ' + a + ' bis ' + b + ' pro Jahr' + (XH > 0 ? ' (inkl. Personal)' : ' an Folie und Energie') + '. Die Investition ist nicht enthalten. Lassen Sie uns die Rechnung mit Ihren echten Daten prüfen.</p>';
+    else if (dmax < 0) h = '<p><strong>Mit Ihren Werten ist Schrumpfen günstiger.</strong> Die laufenden Kosten liegen beim Schrumpfen pro Jahr zwischen ' + b + ' und ' + a + ' niedriger. Dann spricht der Preis nicht für das Etikett-Multipack.</p><p>Es kann trotzdem passen, wenn andere Punkte für Sie zählen: Ihr Produkt verträgt keine Wärme, der Handel will einzeln abtrennbare Packungen, oder in der Linie ist kein Platz für einen Tunnel.</p><p><strong>Nicht passend ist das Etikett-Multipack</strong> für Bündel, die rundum geschützt sein müssen, für Getränke und für Großserien mit einem Format und sehr hohen Taktzahlen. Dort bleiben Sie bei Schrumpffolie oder einer Großserienanlage besser.</p>';
     else h = '<p><strong>Mit diesen Werten ist das Ergebnis nicht eindeutig.</strong> Je nach Annahme ist mal Schrumpfen, mal das Etikett günstiger. Am stärksten wirken Ihr Folienverbrauch je Bündel und Ihr Etikettenpreis. Wenn Sie diese beiden Werte genau kennen, wird das Ergebnis klar.</p>';
     verdict.innerHTML = h;
     var set = function (id, t) { $(id).textContent = t; };
@@ -73,7 +84,7 @@
     set('r-KL', span(KL0, KL1)); set('r-KEM', e0(KEM)); set('r-XE', e0(v.XE)); set('r-KE', span(KE0, KE1));
     set('r-kg', span(v.M * v.gF0 / 1000, v.M * v.gF1 / 1000, function (x) { return nf.format(rd(x, 10)); }) + '\u00a0kg');
     set('r-kwh', nf.format(rd(v.PT * v.hT, 100)) + '\u00a0kWh');
-    set('r-pk', nf.format(v.M * v.n));
+    set('r-pk', v.n > 0 ? nf.format(v.M * v.n) : '—');
     var msg = 'Kostenrechner: ' + inp.M.value + ' Multipacks/Jahr, Folie ' + inp.gF0.value + '–' + inp.gF1.value + ' g je Bündel, ' + inp.pF0.value + '–' + inp.pF1.value + ' €/kg, Tunnel ' + inp.PT.value + ' kW, ' + inp.hT.value + ' h/Jahr, Strom ' + inp.pE.value + ' €/kWh, Etikett ' + inp.pL0.value + '–' + inp.pL1.value + ' € je 1.000, Maschine ' + inp.PM.value + ' kW.';
     $('c-send').href = sendBase + '?art=anfrage&quelle=rechner&formate=offen&msg=' + encodeURIComponent(msg) + '#anfrage';
   }
@@ -81,7 +92,7 @@
   f.addEventListener('input', function () { clearTimeout(t); t = setTimeout(calc, 250); });
   f.addEventListener('change', calc);
   $('c-reset').addEventListener('click', function () {
-    Object.keys(inp).forEach(function (k) { inp[k].value = inp[k].getAttribute('data-def'); });
+    Object.keys(inp).forEach(function (k) { inp[k].value = inp[k].getAttribute('data-def') || ''; });
     same.checked = true; calc();
   });
   calc();
