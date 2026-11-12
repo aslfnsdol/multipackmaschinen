@@ -38,6 +38,12 @@
       if (e.target === ma) { var c = $('input[name="anfrageart"]:checked'); setArt(c ? c.value : 'anfrage'); }
     });
     document.addEventListener('click', function (e) { var a = e.target.closest('[data-formate]'); if (a && sel) setOpt(sel, a.getAttribute('data-formate')); });
+    // Besuchsmessung (Umami): zählt nur abgeschickte, gültige Formulare. Übertragen werden Anliegen, Maschine und Herkunft, keine Eingaben.
+    f.addEventListener('submit', function () {
+      if (!window.umami || typeof window.umami.track !== 'function') return;
+      var c = $('input[name="anfrageart"]:checked');
+      try { window.umami.track('anfrage-senden', { art: c ? c.value : 'anfrage', maschine: ma && ma.value ? ma.value : 'offen', quelle: $('#f-quelle').value || 'direkt' }); } catch (x) {}
+    });
   }
   // Auswahlhilfe (Startseite): drei Fragen → Empfehlung + vorausgefüllte Anfrage. Ohne JS steht die Logik als Text darunter.
   var w = document.getElementById('wahl');
@@ -63,7 +69,7 @@
       A.textContent = 'Anfrage vorbereiten';
     };
     w.addEventListener('change', upd);
-    w.addEventListener('submit', function (e) { e.preventDefault(); location.href = A.href; });
+    w.addEventListener('submit', function (e) { e.preventDefault(); try { if (window.umami) window.umami.track('auswahl-anfrage'); } catch (x) {} location.href = A.href; });
   }
 })();
 // Lösungsseite: Ablauf-Animation (#lpa). Ersetzt in assets/script.js den Block „Lösungsseite: Ablauf-Schema auf Knopfdruck…“ (Z. 33–44).
