@@ -47,7 +47,8 @@ Umami zählt Klicks auf Elemente mit `data-umami-event`. Gesetzt werden die Attr
 | mail-klick | jeder Mail-Link (`mailto:`) | alle Seiten |
 | termin-buchen | Link zum Brevo-Beratungstermin | Menü, Fußzeile, Start, Kontakt |
 
-- F-UMAMI-DS: Datenschutz 6a nennt bisher nur Seitenaufrufe. Die Klick-Ereignisse sind dort nicht beschrieben. Vorschlag für einen Zusatzsatz (nicht eingebaut): „Außerdem zählen wir, wie oft bestimmte Knöpfe angeklickt werden, etwa „Beutel prüfen lassen“, ein Telefon-Link oder das Absenden des Anfrageformulars. Inhalte, die Sie eingeben, werden dabei nicht erfasst.“ Alexander/Anwalt entscheiden.
+- F-UMAMI-DS: Datenschutz 6a nennt bisher nur Seitenaufrufe. Die Klick-Ereignisse sind dort nicht beschrieben. Vorschlag für einen Zusatzsatz (nicht eingebaut): „Außerdem zählen wir, wie oft bestimmte Knöpfe angeklickt werden, etwa „Beutel prüfen lassen“, ein Telefon-Link oder das Absenden des Anfrageformulars. Inhalte, die Sie eingeben, werden dabei nicht erfasst.“ Alexander/Anwalt entscheiden. Abschnitt 6a als Ganzes ebenfalls prüfen lassen.
+- Umami wartet bei Klicks auf Links kurz auf den Statistik-Server und leitet dann weiter. Lokal nicht messbar (Domainsperre). Nach dem Livegang einmal prüfen, ob Klicks spürbar verzögert sind.
 
 ## Medienplätze (gestreift, `data-medium`, Kennungen aus MEDIENPLAETZE.md)
 
@@ -66,11 +67,11 @@ OG-…: gebaut als `assets/og/og-start.png`, `og-fest.png`, `og-multi.png` (Werk
 | E-GALERIE-3 | assets/images/festformat-person-*.webp | benner-msa.de, Freigabe und Einverständnis der Person offen |
 | E-GALERIE-4 | assets/images/festformat-panel-*.webp | benner-msa.de, Freigabe offen |
 | M-KOPF, M-GALERIE-1 | assets/images/multiformat-maschine-*.webp | Werksfoto, freigegeben 07.11. (D15); Hinweis zeigt nur, dass hier später ein Hallenfoto hin soll |
-- F-UMAMI-DS: Datenschutz-Abschnitt 6a „Besuchsstatistik (Umami)“ – Alexander/Anwalt prüfen lassen (siehe auch „Messung“).
 
 ## Zu entscheiden (Nachtlauf 12./13.11.)
 
 - SEO: `areaServed` im Organization-JSON-LD steht auf DE. Auf DE, AT, CH erweitern (Faktendokument C10)?
 - SEO: Die alte Vorschau `assets/images/og-multipackmaschine.jpg` wird nach dem Merge nicht mehr verwendet. Löschen?
 - Technik: www → ohne www per 301 (Cloudflare-Regel) ist weiter offen (Frage 13).
+- Startseite Handy: Die Belegleiste läuft quer zum Wischen (wie die Ablaufschritte). Gestapelt wäre die Startseite rund 7,1 statt 6,8 Bildschirme lang.
 - Startseite: „Wann wir nicht passen“ steht jetzt auf /maschinen (Anker `#nicht-passen`), auf der Startseite nur als Link. Auf der Seite für ein festes Format steht derselbe Inhalt als „Passt nicht, wenn …“.
