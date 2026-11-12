@@ -1355,7 +1355,8 @@ span[id]:empty { position: absolute; }
   .ftr-grid > div:nth-child(2) { display: block; }
   #wegweiser, #maschine, #problem, #preise, #warum, #faq, #kontakt { padding-block: revert-layer; }
   .abschnitt#wegweiser, .abschnitt#maschine, .abschnitt#warum, .abschnitt#faq { padding-block: 40px; }
-  #problem, #preise, #faq { padding-block: 18px; }
+  .kasten#problem, .kasten#preise { padding-block: 18px; }
+  .abschnitt#preise, .abschnitt#problem { padding-block: 40px; }
   .duo #faq { padding-block: 0; }
   .abschluss#kontakt { padding-block: 40px; }
 }
@@ -1372,3 +1373,11 @@ span[id]:empty { position: absolute; }
 [hidden] { display: none !important; }
 .ask-type { grid-template-columns: 1fr 1fr !important; }
 @media (max-width: 480px) { .ask-type { grid-template-columns: 1fr !important; } }
+@media (max-width: 640px) {
+  .buehne .medium { aspect-ratio: 1 / 1; }
+  #maschine .kopf2 p, #wegweiser .kopf2 p, #funktion .kopf2 p { display: none; }
+  .tuer .t-in > p { font-size: .9375rem; }
+  .tuer .fig { aspect-ratio: 2 / 1; }
+  .fall li { font-size: .9375rem; }
+  .duo .person p.micro:last-child { display: none; }
+}
