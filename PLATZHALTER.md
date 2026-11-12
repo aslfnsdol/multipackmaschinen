@@ -54,7 +54,8 @@ Umami zählt Klicks auf Elemente mit `data-umami-event`. Gesetzt werden die Attr
 S-KOPF (+ S-KOPF-MOBIL, S-SCHLEIFE), S-SCHRITT-1, S-SCHRITT-2, S-SCHRITT-3, S-ABREISSEN,
 E-KOPF (+ E-SCHLEIFE), E-VIDEO, E-GALERIE-2, E-GALERIE-5, E-GALERIE-6, E-DETAIL-FAECHER, E-DETAIL-ETIKETTIERER, E-DETAIL-AUSGLEICH, E-BUENDEL-REIHE,
 M-KOPF, M-FORMATWECHSEL, M-GALERIE-2, M-GALERIE-3, M-GALERIE-4, M-STEHBEUTEL-REIHE.
-Noch nicht gesetzt (andere Seiten, nächste Etappe): A-BRANCHE-…, U-HALLE, U-TEAM, U-ABNAHME, K-ILYAS-VIDEO, OG-….
+Noch nicht gesetzt (andere Seiten, nächste Etappe): A-BRANCHE-…, U-HALLE, U-TEAM, U-ABNAHME, K-ILYAS-VIDEO.
+OG-…: gebaut als `assets/og/og-start.png`, `og-fest.png`, `og-multi.png` (Werksfoto D15), `og-vergleich.png`; Generator `../ueberarbeitung-2026-11-11/werkzeug/og_bau.mjs`. Festes Format und Vergleich sind typografisch, weil die Fotos der Maschine für ein festes Format noch keine Freigabe haben. Sobald S-KOPF oder E-KOPF geliefert sind, neu bauen.
 
 ## Fotos nur zur Ansicht (Hinweis „Freigabe offen“)
 
@@ -66,3 +67,10 @@ Noch nicht gesetzt (andere Seiten, nächste Etappe): A-BRANCHE-…, U-HALLE, U-T
 | E-GALERIE-4 | assets/images/festformat-panel-*.webp | benner-msa.de, Freigabe offen |
 | M-KOPF, M-GALERIE-1 | assets/images/multiformat-maschine-*.webp | Werksfoto, freigegeben 07.11. (D15); Hinweis zeigt nur, dass hier später ein Hallenfoto hin soll |
 - F-UMAMI-DS: Datenschutz-Abschnitt 6a „Besuchsstatistik (Umami)“ – Alexander/Anwalt prüfen lassen (siehe auch „Messung“).
+
+## Zu entscheiden (Nachtlauf 12./13.11.)
+
+- SEO: `areaServed` im Organization-JSON-LD steht auf DE. Auf DE, AT, CH erweitern (Faktendokument C10)?
+- SEO: Die alte Vorschau `assets/images/og-multipackmaschine.jpg` wird nach dem Merge nicht mehr verwendet. Löschen?
+- Technik: www → ohne www per 301 (Cloudflare-Regel) ist weiter offen (Frage 13).
+- Startseite: „Wann wir nicht passen“ steht jetzt auf /maschinen (Anker `#nicht-passen`), auf der Startseite nur als Link. Auf der Seite für ein festes Format steht derselbe Inhalt als „Passt nicht, wenn …“.
