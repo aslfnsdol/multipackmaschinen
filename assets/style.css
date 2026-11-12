@@ -1305,3 +1305,70 @@ h1, h2, h3, h4 { letter-spacing: -.005em; }
 }
 @media print { .handyleiste, .hdr, .ftr { display: none; } }
 @media (max-width: 1200px) { .nav-links { display: none; } .mnav { display: block; } .nav { gap: 8px; } }
+.details4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 6px; }
+.details4 .medium { aspect-ratio: 1 / 1; }
+.details4 .platz .p-mot { font-size: 13.5px; }
+.liste-2 { columns: 2; column-gap: 32px; padding-left: 1.1em; color: var(--mute); }
+.liste-2 li { margin-bottom: 6px; break-inside: avoid; }
+.btn-platz { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 10px 16px; border: 1.5px dashed #c99a06; background: #fff6d6; color: #6b5200; font: 500 13px/1.3 var(--mono); border-radius: 2px; }
+@media (max-width: 899px) { .details4 { grid-template-columns: 1fr 1fr; } .liste-2 { columns: 1; } }
+/* Sprungziele (leere Anker) belegen keine Rasterzelle */
+span[id]:empty { position: absolute; }
+.abschnitt { padding: clamp(44px, 5vw, 72px) 0; }
+.kopf2 { margin-bottom: 24px; }
+.schritte .medium { aspect-ratio: 16 / 10; }
+.duo { display: grid; grid-template-columns: 1fr 1.15fr; gap: 48px; align-items: start; }
+.duo .person { grid-template-columns: 160px 1fr; align-items: start; gap: 24px; }
+.duo .faq { margin-top: 12px; }
+@media (max-width: 899px) { .duo { grid-template-columns: 1fr; gap: 32px; } .duo .person { grid-template-columns: 1fr; } }
+.tuer { grid-template-columns: .8fr 1.2fr; }
+.tuer .fig { aspect-ratio: auto; }
+.tuer .t-in { padding: 20px 22px; gap: 10px; }
+.schritte .medium { aspect-ratio: 16 / 9; }
+.wahl-unten { margin-top: 20px; }
+@media (max-width: 1080px) { .tuer { grid-template-columns: 1fr; } .tuer .fig { aspect-ratio: 16 / 10; } }
+.fall { padding-inline: max(0px, calc((100% - 1240px) / 2)); }
+@media (max-width: 899px) { .brand-name { font-size: 1rem; } }
+@media (max-width: 420px) { .brand-name { font-size: .875rem; } .brand-claim { display: none; } }
+/* Handy: kürzer stapeln */
+@media (max-width: 899px) {
+  .schritte { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 84%; overflow-x: auto; scroll-snap-type: x mandatory; border-right: 0; }
+  .schritt { scroll-snap-align: start; border-right: 1px solid var(--line); border-bottom: 0; }
+  .schritt:last-child { border-right: 1px solid var(--line); }
+  .wahl fieldset { padding: 14px 16px; }
+  .wahl fieldset label { font-size: .9375rem; }
+  .duo .person img { width: 96px; max-width: 96px; aspect-ratio: 1; object-fit: cover; object-position: top; border-radius: 50%; }
+}
+@media (max-width: 640px) {
+  .beleg { grid-template-columns: 1fr 1fr; }
+  .beleg > div { padding: 12px 16px; font-size: .875rem; }
+  .beleg > div:first-child { grid-column: 1 / -1; }
+  .beleg > div:nth-child(2n+1):not(:first-child) { border-right: 1px solid var(--line); }
+  .tuer .fig { aspect-ratio: 16 / 9; }
+  .wahl fieldset { display: grid; grid-template-columns: 1fr 1fr; }
+  .wahl legend { grid-column: 1 / -1; }
+  .kasten { padding: 18px; }
+}
+/* Alte Startseiten-Regeln (ID-gebunden) für die neuen Seiten aufheben */
+@media (max-width: 899px) {
+  #multiformat .btn-ghost, #maschine .cta-row .btn-ghost, .t-cta .btn-ghost { display: inline-flex; }
+  .ftr-grid > div:nth-child(2) { display: block; }
+  #wegweiser, #maschine, #problem, #preise, #warum, #faq, #kontakt { padding-block: revert-layer; }
+  .abschnitt#wegweiser, .abschnitt#maschine, .abschnitt#warum, .abschnitt#faq { padding-block: 40px; }
+  #problem, #preise, #faq { padding-block: 18px; }
+  .duo #faq { padding-block: 0; }
+  .abschluss#kontakt { padding-block: 40px; }
+}
+.galerie { grid-template-rows: clamp(320px, 40vw, 540px); }
+.galerie > .fig, .galerie > .medium { height: 100%; aspect-ratio: auto !important; min-height: 0; }
+.galerie .fig { background: #f6f7f8; }
+.galerie .platz { aspect-ratio: auto; }
+.medium-169 { max-width: 1000px; }
+@media (max-width: 899px) {
+  .galerie { grid-template-rows: auto; }
+  .galerie > .fig, .galerie > .medium { aspect-ratio: 3 / 4 !important; height: auto; }
+  .galerie > :first-child { aspect-ratio: 4 / 3 !important; }
+}
+[hidden] { display: none !important; }
+.ask-type { grid-template-columns: 1fr 1fr !important; }
+@media (max-width: 480px) { .ask-type { grid-template-columns: 1fr !important; } }

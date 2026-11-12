@@ -15,7 +15,7 @@
 <meta property="og:image" content="https://multipackmaschinen.de/assets/images/og-multipackmaschine.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Etikett-Multipackmaschine von Benner MSA mit Steigband, Etikettierern und Bedienpanel">
+<meta property="og:image:alt" content="Multipackmaschine von Benner MSA mit Steigband, Etikettierern und Bedienpanel">
     <meta property="og:locale" content="de_DE">
     <meta property="og:site_name" content="multipackmaschinen.de">
     <meta name="twitter:card" content="summary_large_image">
@@ -166,7 +166,7 @@
     <nav class="bc" aria-label="Brotkrumen"><ol class="crumbs"><li><a href="/">Startseite</a></li><li><span aria-current="page">Kontakt</span></li></ol></nav>
     <p class="eyebrow">Kontakt</p>
 <h1>Erzählen Sie uns von Ihrem Multipack</h1>
-    <p class="lead">Anfrage, Rückruf oder Muster: Wählen Sie, was Ihnen hilft. Wir antworten binnen 1 Arbeitstag. Die Beratung ist kostenlos. Die Geschäftsführung bringt über 25 Jahre Erfahrung im Sondermaschinenbau mit.</p>
+    <p class="lead">Preisrahmen, Beutelprüfung, Rückruf oder Vorführung per Video: Wählen Sie, was Ihnen hilft. Wir antworten binnen 1 Arbeitstag. Die Beratung ist kostenlos.</p>
   </div>
 </section>
 
@@ -184,6 +184,7 @@
         <ul class="contact-list">
           <li><span>Telefon</span><a href="tel:+4972449476400">07244&nbsp;9476&#8209;400</a><small>Mo–Fr 08:00–17:00 Uhr</small></li>
           <li><span>E-Mail</span><a href="mailto:info@benner-msa.de">info@benner-msa.de</a><small>Antwort binnen 1 Arbeitstag</small></li>
+          <li><span>Termin</span><a href="https://meet.brevo.com/benner-msa/beratungstermin" rel="noopener">Beratungstermin buchen</a><small>Termin im Kalender wählen</small></li>
           <li><span>Adresse</span>Benner MSA GmbH<br>Am Hasenbiel 6<br>76297 Stutensee-Blankenloch<br>Baden-Württemberg, Deutschland</li>
         </ul>
       </div>
@@ -199,11 +200,23 @@
   <fieldset class="fs field-full">
     <legend>Worum geht es? *</legend>
     <div class="ask-type">
-      <label><input type="radio" name="anfrageart" value="anfrage" required checked><span class="rd" aria-hidden="true"></span><strong>Projekt anfragen</strong><small>Sie beschreiben Ihr Multipack, wir melden uns mit einer Einschätzung.</small></label>
-      <label><input type="radio" name="anfrageart" value="rueckruf"><span class="rd" aria-hidden="true"></span><strong>Rückruf vereinbaren</strong><small>Wir rufen Sie zu Ihrer Wunschzeit an.</small></label>
+      <label><input type="radio" name="anfrageart" value="anfrage" required checked><span class="rd" aria-hidden="true"></span><strong>Projekt oder Preisrahmen</strong><small>Sie beschreiben Ihr Multipack, wir nennen Ihnen den Preisrahmen binnen 1 Arbeitstag.</small></label>
       <label><input type="radio" name="anfrageart" value="muster"><span class="rd" aria-hidden="true"></span><strong>Beutel prüfen lassen</strong><small>Sie schicken uns Beutel, wir prüfen, ob und wie sie sich bündeln lassen.</small></label>
+      <label><input type="radio" name="anfrageart" value="rueckruf"><span class="rd" aria-hidden="true"></span><strong>Rückruf vereinbaren</strong><small>Wir rufen Sie zu Ihrer Wunschzeit an.</small></label>
+      <label><input type="radio" name="anfrageart" value="video"><span class="rd" aria-hidden="true"></span><strong>Vorführung per Video</strong><small>Wir zeigen Ihnen die Maschine per Videoanruf aus der Halle.</small></label>
     </div>
   </fieldset>
+  <div class="field field-full">
+    <label for="maschine">Welche Maschine interessiert Sie? <span class="opt">(optional)</span></label>
+    <span class="select-wrap">
+      <select id="maschine" name="maschine">
+        <option value="" selected>Bitte wählen</option>
+        <option value="fest">Multipackmaschine für ein festes Format</option>
+        <option value="multiformat">Multiformat-Multipackmaschine (viele Formate)</option>
+        <option value="offen">Noch offen, bitte beraten Sie mich</option>
+      </select>
+    </span>
+  </div>
   <div class="field">
     <label for="name">Name *</label>
     <input type="text" id="name" name="name" required autocomplete="name">
@@ -217,7 +230,7 @@
     <input type="email" id="email" name="email" required autocomplete="email" placeholder="name@firma.de">
   </div>
   <div class="field">
-    <label for="phone">Telefon <span class="opt">(für Rückruf nötig)</span></label>
+    <label for="phone">Telefon <span class="opt">(für Rückruf und Video nötig)</span></label>
     <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="07244 …">
   </div>
   <div class="field">
@@ -234,10 +247,10 @@
   </div>
   <div class="field">
     <label for="product">Was soll gebündelt werden? <span class="opt">(optional)</span></label>
-    <input type="text" id="product" name="produkt" placeholder="z. B. Riegel im Flowpack, Nüsse im Vierrandbeutel">
+    <input type="text" id="product" name="produkt" placeholder="z. B. Nüsse im Stehbeutel, Riegel im Flowpack">
   </div>
-  <div class="only-if" data-only="rueckruf">
-    <p class="only-h">Nur bei Rückruf</p>
+  <div class="only-if" data-only="rueckruf video">
+    <p class="only-h">Nur bei Rückruf oder Vorführung</p>
     <div class="field field-full">
       <label for="rueckruf_zeit">Wann passt es Ihnen? <span class="opt">(optional)</span></label>
       <span class="select-wrap">
@@ -252,13 +265,18 @@
   <div class="only-if" data-only="muster">
     <p class="only-h">Nur bei Beutelprüfung</p>
     <div class="field"><label for="muster_buendel">Bündelgröße <span class="opt">(optional)</span></label><input type="text" id="muster_buendel" name="muster_buendel" placeholder="z. B. 3er"></div>
-    <div class="field"><label for="muster_mass">Beutelmaß <span class="opt">(optional)</span></label><input type="text" id="muster_mass" name="muster_mass" placeholder="L × B × H in mm"><span class="field-hint">Die Etikett-Multipackmaschine verarbeitet Beutel bis 200 × 200 × 100 mm.</span></div>
+    <div class="field"><label for="muster_mass">Beutelmaß <span class="opt">(optional)</span></label><input type="text" id="muster_mass" name="muster_mass" placeholder="L × B × H in mm"><span class="field-hint">Die Maschine für ein festes Format verarbeitet Beutel bis 200 × 200 × 100 mm.</span></div>
     <p class="field-full field-hint" style="grid-column:1/-1">Wir melden uns mit Versandadresse und Ablauf.</p>
-      </div>
+  </div>
   <div class="field field-full">
     <label for="message">Ihre Anforderungen <span class="opt">(optional)</span></label>
     <textarea id="message" name="message" rows="4" placeholder="Bündelgröße, Stückzahl, Linie, Zeitplan"></textarea>
   </div>
+  <div class="field field-full" data-offen="F-UPLOAD" hidden>
+    <label for="dateien">Formatliste oder Beutelfoto <span class="opt">(optional)</span></label>
+    <input type="file" id="dateien" name="dateien" multiple accept=".pdf,.xlsx,.xls,.csv,.jpg,.jpeg,.png,.heic" disabled>
+  </div>
+  <p class="field-full form-note" style="margin-top:0">Formatliste oder Beutelfoto? Schicken Sie die Dateien an <a href="mailto:info@benner-msa.de?subject=Formatliste%20Multipack">info@benner-msa.de</a>, wir ordnen sie Ihrer Anfrage zu.</p>
   <details class="more field-full">
     <summary>Weitere Angaben (optional)</summary>
     <div class="field">
@@ -278,7 +296,7 @@
   <div class="field-full">
     <p class="form-note">* Pflichtfeld</p>
     <button type="submit" class="btn btn-primary btn-full" id="f-submit">Anfrage senden</button>
-    <p class="form-note">Antwort binnen 1 Arbeitstag. Lieber telefonieren? <a href="tel:+4972449476400">07244&nbsp;9476&#8209;400</a>. Ihre Daten nutzen wir nur zur Bearbeitung Ihrer Anfrage, siehe <a href="/datenschutz">Datenschutzerklärung</a>.</p>
+    <p class="form-note">Antwort binnen 1 Arbeitstag. Lieber telefonieren? <a href="tel:+4972449476400">07244&nbsp;9476&#8209;400</a> oder <a href="https://meet.brevo.com/benner-msa/beratungstermin" rel="noopener">Beratungstermin buchen</a>. Ihre Daten nutzen wir nur zur Bearbeitung Ihrer Anfrage, siehe <a href="/datenschutz">Datenschutzerklärung</a>.</p>
   </div>
 </form>
 <!--/P:form-->
@@ -314,7 +332,7 @@
       </div>
       <div class="callout">
         <strong>Vorab schon Zahlen?</strong>
-        Der Preis hängt an Formaten, Leistung und Integration. <a class="go" href="/maschinen#preise">Wovon der Maschinenpreis abhängt</a><br><a class="go" href="/faq">Häufige Fragen</a> · <a class="go" href="/ueber-uns">Über uns</a><br>Zurück zu den <a href="/">Multipackmaschinen</a> · Lieber anrufen? <a href="tel:+4972449476400">07244&nbsp;9476&#8209;400</a>
+        Der Preis hängt an Formaten, Leistung und Integration. <a class="go" href="/etikett-multipackmaschine#preise">Wovon der Maschinenpreis abhängt</a><br><a class="go" href="/faq">Häufige Fragen</a> · <a class="go" href="/ueber-uns">Über uns</a><br>Zurück zu den <a href="/">Multipackmaschinen</a> · Lieber anrufen? <a href="tel:+4972449476400">07244&nbsp;9476&#8209;400</a>
       </div>
     </div>
   </div>

@@ -1,4 +1,4 @@
-/* Scroll-Geschichte (Szenen A–C) + Formatwechsel-Schema. Keine Bibliothek, kein Scroll-Jacking.
+/* Szenen-Bühne (Szenen A–C) + Formatwechsel-Schema. Keine Bibliothek, kein Scroll-Jacking.
    Ohne JS, bei reduzierter Bewegung, unter 900 px Breite oder 620 px Höhe zeigt jede Szene ihr eigenes
    Standbild (im HTML). Nur mit <html class="anim"> ab 900 px läuft die klebende Bühne.
    Jedes Bühnenelement trägt 3 Schlüsselbilder in data-k ("x y s o;…"); hier wird nur interpoliert. */
