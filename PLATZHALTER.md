@@ -45,3 +45,4 @@ Noch nicht gesetzt (andere Seiten, nächste Etappe): A-BRANCHE-…, U-HALLE, U-T
 | E-GALERIE-3 | assets/images/festformat-person-*.webp | benner-msa.de, Freigabe und Einverständnis der Person offen |
 | E-GALERIE-4 | assets/images/festformat-panel-*.webp | benner-msa.de, Freigabe offen |
 | M-KOPF, M-GALERIE-1 | assets/images/multiformat-maschine-*.webp | Werksfoto, freigegeben 07.11. (D15); Hinweis zeigt nur, dass hier später ein Hallenfoto hin soll |
+- F-UMAMI-DS: Neuer Datenschutz-Abschnitt 6a „Besuchsstatistik (Umami)“ – Alexander/Anwalt prüfen lassen.
