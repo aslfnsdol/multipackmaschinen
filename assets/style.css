@@ -1457,3 +1457,6 @@ span[id]:empty { position: absolute; }
   .startseite .tuer .t-in > p, .startseite .tuer .datenliste, .startseite .tuer .t-cta { grid-column: 1 / -1; margin-top: 10px; }
   .startseite .tuer .t-cta { flex-wrap: nowrap; gap: 8px; }
 }
+/* Barrierefreiheit: Fokus auf dunklen Flächen weiß (Rot hat dort nur 2,3 : 1), kleine Beleg-Beschriftung dunkler (4,5 : 1) */
+.buehne :focus-visible, .dunkel :focus-visible, .abschluss :focus-visible, .fall :focus-visible, .wahl .w-erg :focus-visible, .cta-end :focus-visible, .result :focus-visible, .pkopf :focus-visible, .zahlen :focus-visible, .band :focus-visible { outline-color: #fff; }
+.beleg .k { color: var(--mute); }
