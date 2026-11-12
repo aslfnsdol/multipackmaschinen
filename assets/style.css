@@ -1381,3 +1381,79 @@ span[id]:empty { position: absolute; }
   .fall li { font-size: .9375rem; }
   .duo .person p.micro:last-child { display: none; }
 }
+
+/* Startseite gekürzt (13.11.2026): fünf Belegzellen, Preis/Abgrenzung als Linkzeile, Hersteller im Ansprechpartner-Block */
+.beleg { grid-template-columns: repeat(5, 1fr); }
+.beleg .offen + .offen { margin-top: 4px; }
+.wahl-links { display: flex; flex-wrap: wrap; gap: 8px 28px; margin-top: 18px; font-size: .9375rem; }
+#warum .hersteller { list-style: none; display: grid; gap: 8px; margin-top: 14px; }
+#warum .hersteller li { color: var(--mute); padding-left: 18px; position: relative; }
+#warum .hersteller li::before { content: ""; position: absolute; left: 0; top: .7em; width: 8px; height: 2px; background: var(--red); }
+#warum .hersteller b { color: var(--ink); font-weight: 600; }
+#warum .zitat { margin-top: 14px; }
+#warum h2 { font-size: clamp(1.625rem, 2.4vw, 2.125rem); }
+@media (max-width: 1080px) { .beleg { grid-template-columns: repeat(3, 1fr); } .beleg > div:nth-child(3) { border-right: 0; } .beleg > div:nth-child(-n+3) { border-bottom: 1px solid var(--line); } }
+@media (max-width: 640px) {
+  .beleg { grid-template-columns: 1fr 1fr; }
+  .beleg > div { border-right: 0; border-bottom: 1px solid var(--line); }
+  .beleg > div:nth-child(2n) { border-right: 1px solid var(--line); }
+  .beleg > div:last-child { grid-column: 1 / -1; border-right: 0; }
+}
+@media (max-width: 640px) { .beleg > div:first-child { grid-column: auto; } }
+/* Startseite: dichter */
+.startseite .abschnitt { padding: clamp(36px, 4.2vw, 60px) 0; }
+.startseite .buehne .medium { max-height: 58vh; }
+.startseite .kopf2 { margin-bottom: 22px; }
+@media (min-width: 900px) { .startseite #warum .duo { grid-template-columns: 1.45fr 1fr; gap: 40px; } }
+.abschluss .a-in > div:first-child { flex: 1 1 520px; }
+.abschluss h2 { max-width: 32ch; }
+.ftr { padding-top: 56px; }
+.ftr-bottom { margin-top: 40px; }
+@media (min-width: 900px) {
+  .startseite .kopf2 { max-width: none; display: grid; grid-template-columns: 1fr 1fr; column-gap: 48px; align-items: end; }
+  .startseite .kopf2 > .eyebrow { grid-column: 1; }
+  .startseite .kopf2 > h2 { grid-column: 1; }
+  .startseite .kopf2 > p:not(.eyebrow) { grid-column: 2; grid-row: 1 / span 2; margin: 0; }
+  .startseite .tuer { grid-template-columns: .62fr 1.38fr; }
+  .startseite .schritte .medium { aspect-ratio: 2 / 1; }
+}
+/* Startseite Handy: Belegleiste quer wischen, Türen kompakt, Ansprechpartner mit kleinem Bild */
+@media (max-width: 640px) {
+  .startseite .buehne .medium { aspect-ratio: 4 / 3; }
+  .startseite .beleg { display: grid; grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 72%; overflow-x: auto; scroll-snap-type: x mandatory; }
+  .startseite .beleg > div { grid-column: auto; scroll-snap-align: start; border-bottom: 0; border-right: 1px solid var(--line); }
+  .startseite .tuer { grid-template-columns: 112px 1fr; }
+  .startseite .tuer .fig { aspect-ratio: auto; border-bottom: 0; border-right: 1px solid var(--line); }
+  .startseite .tuer .fig > img { padding: 6px; }
+  .startseite .tuer .t-in { padding: 14px 14px 16px; gap: 8px; }
+  .startseite .tuer .t-cta .btn { padding: 8px 12px; font-size: .875rem; min-height: 44px; }
+  .startseite .tuer .datenliste { font-size: .875rem; }
+  .startseite #warum .person { display: block; }
+  .startseite #warum .person img { float: right; width: 72px; max-width: 72px; margin: 0 0 8px 12px; }
+  .startseite #warum .hersteller li { font-size: .9375rem; }
+  .startseite .wahl-links { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 16px; font-size: .875rem; }
+  .startseite .abschluss#kontakt { padding-block: 32px; }
+  .ftr { padding-top: 40px; }
+  .ftr-grid { gap: 18px 16px; }
+  .ftr ul { gap: 6px; }
+  .ftr-h { margin-bottom: 8px; }
+  .ftr-bottom { margin-top: 24px; }
+}
+@media (max-width: 640px) {
+  .startseite .buehne .cta-row { flex-wrap: nowrap; gap: 8px; }
+  .startseite .buehne .cta-row .btn { padding: 12px 12px; font-size: .9375rem; flex: 1 1 auto; white-space: nowrap; }
+  .startseite .wahl legend span { display: inline; margin: 0 6px 0 0; }
+  .startseite .wahl fieldset { padding: 12px 14px; gap: 6px; }
+  .ftr-grid > div:nth-child(5) { grid-column: 1 / -1; display: grid; grid-template-columns: 1.3fr 1fr; column-gap: 16px; }
+  .ftr-grid > div:nth-child(5) > :nth-child(1), .ftr-grid > div:nth-child(5) > :nth-child(2) { grid-column: 1; }
+  .ftr-grid > div:nth-child(5) > :nth-child(3) { grid-column: 2; grid-row: 1; margin-top: 0; }
+  .ftr-grid > div:nth-child(5) > :nth-child(4) { grid-column: 2; grid-row: 2; }
+}
+@media (max-width: 640px) {
+  .startseite .tuer { grid-template-columns: 96px 1fr; column-gap: 14px; padding: 14px; align-items: start; }
+  .startseite .tuer .fig { grid-row: 1 / span 2; aspect-ratio: 1; border: 1px solid var(--line); }
+  .startseite .tuer .t-in { display: contents; }
+  .startseite .tuer .tag-k, .startseite .tuer h3 { grid-column: 2; }
+  .startseite .tuer .t-in > p, .startseite .tuer .datenliste, .startseite .tuer .t-cta { grid-column: 1 / -1; margin-top: 10px; }
+  .startseite .tuer .t-cta { flex-wrap: nowrap; gap: 8px; }
+}
