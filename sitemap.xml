@@ -2,34 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://multipackmaschinen.de/</loc>
-        <lastmod>2026-11-07</lastmod>
+        <lastmod>2026-11-12</lastmod>
     </url>
     <url>
-        <loc>https://multipackmaschinen.de/loesung</loc>
-        <lastmod>2026-11-07</lastmod>
+        <loc>https://multipackmaschinen.de/etikett-multipackmaschine</loc>
+        <lastmod>2026-11-12</lastmod>
+    </url>
+    <url>
+        <loc>https://multipackmaschinen.de/multiformat-multipackmaschine</loc>
+        <lastmod>2026-11-12</lastmod>
     </url>
     <url>
         <loc>https://multipackmaschinen.de/maschinen</loc>
-        <lastmod>2026-11-07</lastmod>
+        <lastmod>2026-11-12</lastmod>
+    </url>
+    <url>
+        <loc>https://multipackmaschinen.de/loesung</loc>
+        <lastmod>2026-11-12</lastmod>
     </url>
     <url>
         <loc>https://multipackmaschinen.de/kostenrechner</loc>
-        <lastmod>2026-11-07</lastmod>
+        <lastmod>2026-11-12</lastmod>
     </url>
     <url>
         <loc>https://multipackmaschinen.de/anwendungen</loc>
-        <lastmod>2026-11-07</lastmod>
+        <lastmod>2026-11-12</lastmod>
     </url>
     <url>
         <loc>https://multipackmaschinen.de/faq</loc>
-        <lastmod>2026-11-07</lastmod>
+        <lastmod>2026-11-12</lastmod>
     </url>
     <url>
         <loc>https://multipackmaschinen.de/ueber-uns</loc>
-        <lastmod>2026-11-07</lastmod>
+        <lastmod>2026-11-12</lastmod>
     </url>
     <url>
         <loc>https://multipackmaschinen.de/kontakt</loc>
-        <lastmod>2026-11-07</lastmod>
+        <lastmod>2026-11-12</lastmod>
     </url>
 </urlset>
