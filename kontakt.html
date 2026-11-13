@@ -171,7 +171,7 @@
     <nav class="bc" aria-label="Brotkrumen"><ol class="crumbs"><li><a href="/">Startseite</a></li><li><span aria-current="page">Kontakt</span></li></ol></nav>
     <p class="eyebrow">Kontakt</p>
 <h1>Erzählen Sie uns von Ihrem Multipack</h1>
-    <p class="lead">Preisrahmen, Beutelprüfung, Rückruf oder Vorführung per Video: Wählen Sie, was Ihnen hilft. Wir antworten binnen 1 Arbeitstag. Die Beratung ist kostenlos.</p>
+    <p class="lead">Preisrahmen, Beutelprüfung oder Rückruf: Wählen Sie, was Ihnen hilft. Wir antworten binnen 1 Arbeitstag. Die Beratung ist kostenlos.</p>
   </div>
 </section>
 
@@ -208,7 +208,6 @@
       <label><input type="radio" name="anfrageart" value="anfrage" required checked><span class="rd" aria-hidden="true"></span><strong>Projekt oder Preisrahmen</strong><small>Sie beschreiben Ihr Multipack, wir nennen Ihnen den Preisrahmen binnen 1 Arbeitstag.</small></label>
       <label><input type="radio" name="anfrageart" value="muster"><span class="rd" aria-hidden="true"></span><strong>Beutel prüfen lassen</strong><small>Sie schicken uns Beutel, wir prüfen, ob und wie sie sich bündeln lassen.</small></label>
       <label><input type="radio" name="anfrageart" value="rueckruf"><span class="rd" aria-hidden="true"></span><strong>Rückruf vereinbaren</strong><small>Wir rufen Sie zu Ihrer Wunschzeit an.</small></label>
-      <label><input type="radio" name="anfrageart" value="video"><span class="rd" aria-hidden="true"></span><strong>Vorführung per Video</strong><small>Wir zeigen Ihnen die Maschine per Videoanruf aus der Halle.</small></label>
     </div>
   </fieldset>
   <div class="field field-full">
@@ -235,7 +234,7 @@
     <input type="email" id="email" name="email" required autocomplete="email" placeholder="name@firma.de">
   </div>
   <div class="field">
-    <label for="phone">Telefon <span class="opt">(für Rückruf und Video nötig)</span></label>
+    <label for="phone">Telefon <span class="opt">(für Rückruf nötig)</span></label>
     <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="07244 …">
   </div>
   <div class="field">
@@ -254,8 +253,8 @@
     <label for="product">Was soll gebündelt werden? <span class="opt">(optional)</span></label>
     <input type="text" id="product" name="produkt" placeholder="z. B. Nüsse im Stehbeutel, Riegel im Flowpack">
   </div>
-  <div class="only-if" data-only="rueckruf video">
-    <p class="only-h">Nur bei Rückruf oder Vorführung</p>
+  <div class="only-if" data-only="rueckruf">
+    <p class="only-h">Nur bei Rückruf</p>
     <div class="field field-full">
       <label for="rueckruf_zeit">Wann passt es Ihnen? <span class="opt">(optional)</span></label>
       <span class="select-wrap">
@@ -360,6 +359,6 @@
   </div>
 </footer>
 <!--/P:footer-->
-<script src="assets/script.js?v=20261113" defer></script>
+<script src="assets/script.js?v=20261113b" defer></script>
 </body>
 </html>

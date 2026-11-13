@@ -15,13 +15,13 @@
     var q = new URLSearchParams(location.search), $ = function (s) { return f.querySelector(s); };
     var sel = $('#formate'), ma = $('#maschine');
     var T = { anfrage: ['Anfrage senden', 'Multipack: Anfrage'], rueckruf: ['Rückruf anfordern', 'Multipack: Rückruf'],
-      muster: ['Beutelprüfung anfragen', 'Multipack: Beutelprüfung'], video: ['Vorführung anfragen', 'Multipack: Vorführung per Video'] };
+      muster: ['Beutelprüfung anfragen', 'Multipack: Beutelprüfung'] };
     var setArt = function (v) {
       if (!T[v]) return;
       var r = $('input[name="anfrageart"][value="' + v + '"]'); if (r) r.checked = true;
       $('#f-submit').textContent = T[v][0];
       $('#f-subject').value = T[v][1] + (ma && ma.value ? ' (' + ma.value + ')' : '');
-      $('#phone').required = v === 'rueckruf' || v === 'video';
+      $('#phone').required = v === 'rueckruf';
       [].forEach.call(f.querySelectorAll('[data-only]'), function (el) { el.hidden = el.getAttribute('data-only').split(' ').indexOf(v) < 0; });
     };
     var setOpt = function (el, v) { if (el && v && el.querySelector('option[value="' + v + '"]')) el.value = v; };
