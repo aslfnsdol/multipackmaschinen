@@ -1490,3 +1490,5 @@ span[id]:empty { position: absolute; }
   .buehne.mit-bild h1 { font-size: clamp(2.125rem, 9vw, 3rem); }
   .buehne.mit-bild .b-bild { aspect-ratio: 3 / 2; min-height: 0; }
 }
+/* Kennzahl als kurzer Text statt Zahl (Multiformat, 13.11.) */
+.zahl .v.v-txt { font-size: clamp(1.375rem, 2.1vw, 1.875rem); line-height: 1.15; }

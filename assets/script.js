@@ -48,7 +48,7 @@
       fest: ['Multipackmaschine für ein festes Format', 'Für liegende Beutel in einem Format. Für eine Aktion wechseln Sie nur die Etikettenrolle.', 'fest', '1'],
       festPruefen: ['Festes Format, mit Prüfung Ihrer Formate', 'Ob Ihr zweites Format auf der Maschine für ein festes Format laufen kann, prüfen wir an Ihrer Formatliste.', 'fest', '2-3'],
       beide: ['Beide Wege prüfen', 'Liegende Beutel in mehreren Formaten, die oft wechseln: Wir rechnen beide Maschinen an Ihrer Formatliste durch.', 'offen', '2-3'],
-      multi: ['Multiformat-Multipackmaschine', 'Für Stehbeutel in mehreren Formaten. Das Format wechselt per Rezept am Panel, in höchstens 30 Minuten.', 'multiformat', '4-10'],
+      multi: ['Multiformat-Multipackmaschine', 'Für Stehbeutel in mehreren Formaten. Das Format wechselt per Rezept am Panel, in wenigen Minuten.', 'multiformat', '4-10'],
       steh1: ['Sprechen Sie uns an', 'Ein einzelnes Stehbeutel-Format: Welche Lösung passt, prüfen wir an Ihrem Beutel.', 'offen', '1']
     };
     var upd = function () {
