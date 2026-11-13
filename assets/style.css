@@ -1462,3 +1462,7 @@ span[id]:empty { position: absolute; }
 .beleg .k { color: var(--mute); }
 @media (max-width: 640px) { .ftr-grid > div:nth-child(5) > ul { align-content: start; } }
 @media (max-width: 379px) { .startseite .buehne .cta-row { flex-wrap: wrap; } .startseite .tuer .t-cta { flex-wrap: wrap; } }
+/* Live-Fassung 13.11.: Startbühne ohne Medium, Kennzahlenband mit zwei Werten */
+.buehne.ohne-medium .b-txt { margin-top: 0; padding-top: clamp(48px, 7vw, 104px); background: none; }
+.zahlen.zahlen-2 { grid-template-columns: 1fr 1fr; }
+.zahlen.zahlen-2 .zahl { border-bottom: 0; }
