@@ -1466,12 +1466,13 @@ span[id]:empty { position: absolute; }
 .buehne.ohne-medium .b-txt { margin-top: 0; padding-top: clamp(48px, 7vw, 104px); background: none; }
 .zahlen.zahlen-2 { grid-template-columns: 1fr 1fr; }
 .zahlen.zahlen-2 .zahl { border-bottom: 0; }
-/* Belegleiste mit drei Zellen (Presse, Partner, Hersteller) */
-@media (min-width: 1081px) { .beleg.beleg-3 { grid-template-columns: 1.7fr 1fr 1fr; } .beleg.beleg-3 > div { border-bottom: 0; } }
+/* Belegleiste mit vier Zellen (Presse, Partner, Patent, Hersteller) */
+@media (min-width: 1081px) { .beleg.beleg-4 { grid-template-columns: 1.6fr 1fr 1fr 1fr; } .beleg.beleg-4 > div { border-bottom: 0; } }
 @media (min-width: 641px) and (max-width: 1080px) {
-  .beleg.beleg-3 { grid-template-columns: 1fr 1fr; }
-  .beleg.beleg-3 > div:first-child { grid-column: 1 / -1; border-right: 0; border-bottom: 1px solid var(--line); }
-  .beleg.beleg-3 > div:nth-child(2) { border-right: 1px solid var(--line); }
+  .beleg.beleg-4 { grid-template-columns: 1fr 1fr; }
+  .beleg.beleg-4 > div { grid-column: auto; border-bottom: 0; border-right: 0; }
+  .beleg.beleg-4 > div:nth-child(odd) { border-right: 1px solid var(--line); }
+  .beleg.beleg-4 > div:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
 }
 #warum .zitat { border-left: 3px solid var(--red); padding-left: 16px; }
 #warum .zitat p { font: 600 1.125rem/1.45 var(--font-head); color: var(--ink); }
