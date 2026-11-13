@@ -1477,3 +1477,16 @@ span[id]:empty { position: absolute; }
 #warum .zitat { border-left: 3px solid var(--red); padding-left: 16px; }
 #warum .zitat p { font: 600 1.125rem/1.45 var(--font-head); color: var(--ink); }
 #warum .zitat cite { display: block; margin-top: 6px; font: 500 13px/1.5 var(--mono); color: var(--mute); font-style: normal; }
+/* Startbühne mit Kopfbild (Symbolbild, 13.11.): Text links, Bild rechts; Handy Text zuerst, Bild darunter */
+.buehne.mit-bild .b-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr); min-height: clamp(460px, 40vw, 600px); }
+.buehne.mit-bild .b-txt2 { display: grid; gap: 22px; align-content: center; padding: clamp(40px, 5vw, 72px) clamp(24px, 3.5vw, 56px) clamp(40px, 5vw, 72px) max(var(--gutter), calc((100vw - var(--wrap)) / 2 + var(--gutter))); }
+.buehne.mit-bild h1 { font-size: clamp(2.375rem, 4.6vw, 4.25rem); }
+.buehne.mit-bild .b-bild { position: relative; margin: 0; min-height: 100%; background: #0d0f12; }
+.buehne.mit-bild .b-bild img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 45% 60%; }
+.buehne.mit-bild .symbolbild { position: absolute; right: 10px; bottom: 8px; font: 500 11px/1.4 var(--mono); letter-spacing: .04em; color: rgb(255 255 255 / .82); background: rgb(24 28 33 / .5); padding: 2px 6px; border-radius: 2px; }
+@media (max-width: 899px) {
+  .buehne.mit-bild .b-split { grid-template-columns: 1fr; min-height: 0; }
+  .buehne.mit-bild .b-txt2 { padding: 36px var(--gutter) 32px; gap: 18px; }
+  .buehne.mit-bild h1 { font-size: clamp(2.125rem, 9vw, 3rem); }
+  .buehne.mit-bild .b-bild { aspect-ratio: 3 / 2; min-height: 0; }
+}
